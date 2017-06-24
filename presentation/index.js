@@ -3,6 +3,7 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
+  Appear,
   BlockQuote,
   Deck,
   Heading,
@@ -11,6 +12,11 @@ import {
   Slide,
   Text,
   Image,
+  Quote,
+  Cite,
+  Link,
+  CodePane,
+  Code,
   S
 } from "spectacle";
 
@@ -19,6 +25,7 @@ import preloader from "spectacle/lib/utils/preloader";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
+
 
 // Require CSS
 require("normalize.css");
@@ -46,14 +53,13 @@ const theme = createTheme({
 });
 
 const emcee = {
-  name: "Cyril",
-  twitter: "cyril.silverman"
+  name: "Adam",
+  twitter: "admataz"
 };
 
 const speakers = [
-  { name: "Paul Jensen", title: "From LNUG presentation to published book" },
-  { name: "flyingunicorn222", title: "Trading cryptocurrencies, forex, commodities stocks and more using node.js" },
-  { name: "Will Munn", title: "Speeding up CI with node and docker" }
+  { name: "Irina Shestak", title: "knock-knock-who-there-file-compression-talk_FINAL_2.tar.trz.bz2.gz" },
+  { name: "Daniel Khan", title: "Don't Let Just Node.js Take the Blame!" }
 ];
 
 
@@ -82,54 +88,54 @@ class SpeakerSlide extends React.Component {
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Image src={images.logo} margin="0px auto 0px" height="200px"/>
-          <Heading size={6} textColor="secondary">May 24th, 2017 (#63)</Heading>
-          <List>
+      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme} progress={"none"}>
+        <Slide align={"center center"}>
+         <Image src={images.logo} margin="0px auto 0px" height="200px"/>
+         <Heading size={6} textColor={"#fff"}>#64 - June 2017</Heading>
             {speakers.map((speaker) =>
-              <ListItem textSize={30} key={speaker.title}>
-                {speaker.title} <S type="italics">- {speaker.name}</S>
-              </ListItem>
+              <Text key={speaker.title} textColor={"#ffffff"} textSize={20}>
+                {speaker.name} <S type="italics"> - {speaker.title}</S>
+              </Text>
             )}
-          </List>
-          <List>
-            <ListItem textSize={30}>WIFI: See the walls</ListItem>
-            <ListItem textSize={30}>Twitter: @LNUGorg use hashtags #LNUG #node #javascript #london</ListItem>
-            <ListItem textSize={30}>Gitter: lnug/discuss</ListItem>
-          </List>
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="primary">
-          <Heading size={3} textColor="secondary">House Keeping</Heading>
-          <List>
-            <ListItem>Say hello on Twitter: @lnugorg #lnug (and me: <S type="bold">@{emcee.twitter}</S>)</ListItem>
-            <ListItem>YouTube: LNUG Team 🎥</ListItem>
-            <ListItem>Instagram: <S type="bold">@lnugorg</S> #lnug 📷</ListItem>
-            <ListItem>Gitter: <S type="bold">lnug/discuss</S> 📢</ListItem>
-            <ListItem>Code of Conduct 💕</ListItem>
-            <ListItem>Toilets 🚻</ListItem>
-            <ListItem>Fire Escapes! 🔥</ListItem>
-          </List>
+
+        <Slide id={"safety"}>
+          <Heading size={3} lineHeight={3}>safety and comfort</Heading>
+          <Appear><Heading size={5} textColor="secondary">🚒 Fire Exits: stairs behind you </Heading></Appear>
+          <Appear><Heading size={5} textColor="secondary">🚻 Toilets: towards the lifts </Heading></Appear>
+          <Appear><Heading size={5} textColor="secondary">📡 Wifi <Code>makersWelcome</Code> </Heading></Appear>
+          <Appear><Heading size={5} textColor="secondary">⭐️ Code of Conduct </Heading></Appear>
         </Slide>
 
-        <Slide>
+
+        <Slide id={"hashtags"}>
+          <Heading size={3}>tweet @lnugorg</Heading>
+          <Heading size={4}><Code>#LNUG #node #javascript #london</Code></Heading>
+        </Slide>
+
+        <Slide id={"gitter"}>
+          <Heading size={3}>discuss!</Heading>
+          <Heading size={4}><Link href="http://gitter.im/lnug/discuss" target="_blank"><Code>gitter.im/lnug/discuss</Code></Link></Heading>
+        </Slide>
+
+
+        <Slide id={"venue"}>
           <Heading size={3} textColor="secondary">Venue</Heading>
           <Image src={images.makersLogo.replace("/", "")} margin="0px auto 40px" height="293px"/>
         </Slide>
 
-        <Slide>
+        <Slide id={"pizza-and-beer"}>
           <Heading size={3} textColor="secondary">Pizza and beer</Heading>
           <Image src={images.tiroLogo.replace("/", "")} margin="0px auto 40px" height="293px"/>
         </Slide>
 
-        <Slide>
+        <Slide id={"video-production"}>
           <Heading size={3} textColor="secondary">Video</Heading>
           <Image src={images.pusherLogo.replace("/", "")} margin="0px auto 40px" height="293px"/>
         </Slide>
 
         <SpeakerSlide speaker={speakers[0]} />
-        <SpeakerSlide speaker={speakers[1]} />
 
         <Slide>
           <Heading size={3} textColor="secondary" margin={50}>Community Announcements</Heading>
@@ -139,37 +145,35 @@ export default class Presentation extends React.Component {
           <Heading size={5} textColor="secondary">Have something to share?</Heading>
         </Slide>
 
+        <SpeakerSlide speaker={speakers[1]} />
+
         <Slide>
           <Heading size={3} textColor="secondary">Get Involved</Heading>
-          <List>
-            <ListItem>Assets & Slides<br/>(<S type="bold">github.com/lnug/resources</S>)</ListItem>
-            <ListItem>Website Tips<br/>(<S type="bold">github.com/lnug/lnug.github.io</S>)</ListItem>
-            <ListItem>Gitter Channel<br/>(<S type="bold">lnug/discuss</S>)</ListItem>
-          </List>
+            <Heading size="5">Feedback<br/><Code type="bold">github.com/lnug/feedback</Code></Heading>
+            <Heading size="5">Gitter<br/><Code type="bold">gitter.com/lnug/discuss</Code></Heading>
+
         </Slide>
 
         <Slide>
-          <Heading size={3} textColor="secondary">Call for speakers</Heading>
-          <List>
-            <ListItem>We have speaker slots available!</ListItem>
-            <ListItem>Visit <S type="bold">github.com/lnug/speakers</S> to submit your talk!</ListItem>
-          </List>
+             <Image src={images.logo} margin="0px auto 0px" height="200px"/>
+            <Heading size={3}>submit a talk proposal!</Heading>
+            <Code type="bold">github.com/lnug/speakers</Code>
+          
         </Slide>
 
         <Slide>
+           <Image src={images.logo} margin="0px auto 0px" height="200px"/>
           <Heading size={3} textColor="secondary" margin={40}>Next Time</Heading>
-          <Heading size={4} textColor="secondary">18th June 2017</Heading>
-          <Text textColor="secondary" bold>
+          <Heading size={4} textColor="secondary">26th July 2017</Heading>
+          <Code textColor="secondary" bold>
             meetup.com/london-nodejs
-          </Text>
+          </Code>
           <Text textColor="secondary" italic margin={20}>
             The 4th Wednesday of the month
           </Text>
-          <List>
-            <ListItem>Rubbish in Bins</ListItem>
-            <ListItem>Stack chairs against walls</ListItem>
-            <ListItem>Get involved!</ListItem>
-          </List>
+            Rubbish in Bins
+            Stack chairs against walls
+            Get involved!
         </Slide>
 
         <Slide>
@@ -184,7 +188,6 @@ export default class Presentation extends React.Component {
           <Image src={images.cheers.replace("/", "")} margin="40px auto 0px" height="200px"/>
         </Slide>
 
-        <SpeakerSlide speaker={speakers[2]} />
 
         <Slide>
           <Heading size={3} textColor="secondary">Thank You</Heading>

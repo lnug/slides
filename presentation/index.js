@@ -53,8 +53,8 @@ const theme = createTheme({
 });
 
 const emcee = {
-  name: "Adam",
-  twitter: "admataz"
+  name: "Clarkie",
+  twitter: "clarkieclarkie"
 };
 
 const speakers = [
@@ -91,9 +91,9 @@ export default class Presentation extends React.Component {
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme} progress={"none"}>
         <Slide align={"center center"}>
          <Image src={images.logo} margin="0px auto 0px" height="200px"/>
-         <Heading size={6} textColor={"#fff"}>#64 - June 2017</Heading>
+         <Heading size={6} textColor="secondary">#64 - June 2017</Heading>
             {speakers.map((speaker) =>
-              <Text key={speaker.title} textColor={"#ffffff"} textSize={20}>
+              <Text key={speaker.title} textColor="secondary" textSize={30}>
                 {speaker.name} <S type="italics"> - {speaker.title}</S>
               </Text>
             )}
@@ -101,22 +101,25 @@ export default class Presentation extends React.Component {
 
 
         <Slide id={"safety"}>
-          <Heading size={3} lineHeight={3}>safety and comfort</Heading>
+          <Heading size={3} lineHeight={3} textColor="secondary">safety and comfort</Heading>
           <Appear><Heading size={5} textColor="secondary">🚒 Fire Exits: stairs behind you </Heading></Appear>
           <Appear><Heading size={5} textColor="secondary">🚻 Toilets: towards the lifts </Heading></Appear>
-          <Appear><Heading size={5} textColor="secondary">📡 Wifi <Code>makersWelcome</Code> </Heading></Appear>
+          <Appear><Heading size={5} textColor="secondary">📡 Wifi <Code textColor="secondary">makersWelcome</Code> </Heading></Appear>
           <Appear><Heading size={5} textColor="secondary">⭐️ Code of Conduct </Heading></Appear>
         </Slide>
 
 
         <Slide id={"hashtags"}>
-          <Heading size={3}>tweet @lnugorg</Heading>
-          <Heading size={4}><Code>#LNUG #node #javascript #london</Code></Heading>
+          <Heading size={3} textColor="secondary">tweet @lnugorg</Heading>
+          <Heading size={4} textColor="secondary"><Code textColor="secondary">#LNUG #node #javascript #london</Code></Heading>
+          <Appear>
+            <Heading size={6} textColor="secondary">tweet at me too (@{emcee.twitter})</Heading>
+          </Appear>
         </Slide>
 
         <Slide id={"gitter"}>
-          <Heading size={3}>discuss!</Heading>
-          <Heading size={4}><Link href="http://gitter.im/lnug/discuss" target="_blank"><Code>gitter.im/lnug/discuss</Code></Link></Heading>
+          <Heading size={3} textColor="secondary">discuss!</Heading>
+          <Heading size={4} textColor="secondary"><Link href="http://gitter.im/lnug/discuss" target="_blank"><Code textColor="secondary">gitter.im/lnug/discuss</Code></Link></Heading>
         </Slide>
 
 
@@ -145,20 +148,18 @@ export default class Presentation extends React.Component {
           <Heading size={5} textColor="secondary">Have something to share?</Heading>
         </Slide>
 
-        <SpeakerSlide speaker={speakers[1]} />
-
         <Slide>
           <Heading size={3} textColor="secondary">Get Involved</Heading>
-            <Heading size="5">Feedback<br/><Code type="bold">github.com/lnug/feedback</Code></Heading>
-            <Heading size="5">Gitter<br/><Code type="bold">gitter.com/lnug/discuss</Code></Heading>
+            <Heading size="5" textColor="secondary">Feedback<br/><Code type="bold" textColor="secondary">github.com/lnug/feedback</Code></Heading>
+            <Heading size="5" textColor="secondary">Gitter<br/><Code type="bold" textColor="secondary">gitter.com/lnug/discuss</Code></Heading>
 
         </Slide>
 
         <Slide>
              <Image src={images.logo} margin="0px auto 0px" height="200px"/>
-            <Heading size={3}>submit a talk proposal!</Heading>
-            <Code type="bold">github.com/lnug/speakers</Code>
-          
+            <Heading size={3} textColor="secondary">submit a talk proposal!</Heading>
+            <Code type="bold" textColor="secondary">github.com/lnug/speakers</Code>
+
         </Slide>
 
         <Slide>
@@ -171,9 +172,6 @@ export default class Presentation extends React.Component {
           <Text textColor="secondary" italic margin={20}>
             The 4th Wednesday of the month
           </Text>
-            Rubbish in Bins
-            Stack chairs against walls
-            Get involved!
         </Slide>
 
         <Slide>
@@ -188,6 +186,7 @@ export default class Presentation extends React.Component {
           <Image src={images.cheers.replace("/", "")} margin="40px auto 0px" height="200px"/>
         </Slide>
 
+        <SpeakerSlide speaker={speakers[1]} />
 
         <Slide>
           <Heading size={3} textColor="secondary">Thank You</Heading>
@@ -200,6 +199,9 @@ export default class Presentation extends React.Component {
             <ListItem>Pusher</ListItem>
             <ListItem>github.com/orgs/lnug/people</ListItem>
           </List>
+            Rubbish in Bins,
+            Stack chairs against walls,
+            Get involved!
         </Slide>
 
       </Deck>

@@ -154,18 +154,18 @@ export default class Presentation extends React.Component {
           <Heading size={5} textColor="secondary">Have something to share?</Heading>
         </Slide>
 
+        <SpeakerSlide speaker={speakers[1]} />
+
         <Slide>
           <Heading size={3} textColor="secondary">Get Involved</Heading>
             <Heading size="5" textColor="secondary">Feedback<br/><Code type="bold" textColor="secondary">github.com/lnug/feedback</Code></Heading>
             <Heading size="5" textColor="secondary">Gitter<br/><Code type="bold" textColor="secondary">gitter.com/lnug/discuss</Code></Heading>
-
         </Slide>
 
         <Slide>
              <Image src={images.logo} margin="0px auto 0px" height="200px"/>
             <Heading size={3} textColor="secondary">submit a talk proposal!</Heading>
             <Code type="bold" textColor="secondary">github.com/lnug/speakers</Code>
-
         </Slide>
 
         <Slide>
@@ -192,7 +192,7 @@ export default class Presentation extends React.Component {
           <Image src={images.cheers.replace("/", "")} margin="40px auto 0px" height="200px"/>
         </Slide>
 
-        <SpeakerSlide speaker={speakers[1]} />
+        <SpeakerSlide speaker={speakers[2]} />
 
         <Slide>
           <Heading size={3} textColor="secondary">Thank You</Heading>

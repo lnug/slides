@@ -4,7 +4,6 @@ import React from "react";
 // Import Spectacle Core tags
 import {
   Appear,
-  BlockQuote,
   Deck,
   Heading,
   ListItem,
@@ -12,10 +11,7 @@ import {
   Slide,
   Text,
   Image,
-  Quote,
-  Cite,
   Link,
-  CodePane,
   Code,
   S
 } from "spectacle";
@@ -53,13 +49,23 @@ const theme = createTheme({
 });
 
 const emcee = {
-  name: "Clarkie",
-  twitter: "clarkieclarkie"
+  name: "Laszlo",
+  twitter: "lazlojuly"
 };
 
 const speakers = [
-  { name: "Irina Shestak", title: "knock-knock-who-there-file-compression-talk_FINAL_2.tar.trz.bz2.gz" },
-  { name: "Daniel Khan", title: "Don't Let Just Node.js Take the Blame!" }
+  {
+    name: "Anna Doubkova",
+    title: "Node microservices at Pizza Hut"
+  },
+  {
+    name: "Bruno Godefroy",
+    title: "Do not yield to javascript generators!"
+  },
+  {
+    name: "Zaiste",
+    title: "Rapid web development with Huncwot & Marko"
+  }
 ];
 
 
@@ -165,7 +171,7 @@ export default class Presentation extends React.Component {
         <Slide>
            <Image src={images.logo} margin="0px auto 0px" height="200px"/>
           <Heading size={3} textColor="secondary" margin={40}>Next Time</Heading>
-          <Heading size={4} textColor="secondary">26th July 2017</Heading>
+          <Heading size={4} textColor="secondary">27th September 2017</Heading>
           <Code textColor="secondary" bold>
             meetup.com/london-nodejs
           </Code>

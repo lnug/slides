@@ -97,7 +97,7 @@ export default class Presentation extends React.Component {
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme} progress={"none"}>
         <Slide align={"center center"}>
          <Image src={images.logo} margin="0px auto 0px" height="200px"/>
-         <Heading size={6} textColor="secondary">#64 - June 2017</Heading>
+         <Heading size={6} textColor="secondary">#65 - June 2017</Heading>
             {speakers.map((speaker) =>
               <Text key={speaker.title} textColor="secondary" textSize={30}>
                 {speaker.name} <S type="italics"> - {speaker.title}</S>

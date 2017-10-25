@@ -55,33 +55,33 @@ const emcee = {
 
 const speakers = [
   {
-    name: "Alan Shaw",
-    title: "Hapi + Nes + MiniMongo for gloryful reactive apps",
-    twitter: "_alanshaw",
-    github: "alanshaw"
+    name: "Bartlomiej Specjalny",
+    title: "Scalable Scraping in Node and a bit of GO ",
+    twitter: "",
+    github: "sp3c1 "
   },
   {
-    name: "Rob Tweed",
-    title: "Having your Node.js Cake and Eating It Too",
-    twitter: "rtweed",
-    github: "robtweed"
+    name: "James Porter,  David Scheiner, who else? ",
+    title: "Node.js Lightning talks",
+    twitter: "",
+    github: ""
   }
 ];
 
 const thisMonth = {
-  title: "#66 - September 2017"
+  title: "#67 - October 2017"
 };
 
 const nextMonth = {
-  date: "25th October 2017",
+  date: "22nd November 2017",
   speakers: [
     {
-      name: "Bartlomiej Specjalny (@sp3c1)",
-      title: "Scalable Scraping in Node and a bit of GO"
+      name: "Bernard Baker",
+      title: "Building an Electron application with NodeJS"
     },
     {
-      name: "You?",
-      title: "Your node.js story"
+      name: "Simon McManus",
+      title: "Taking LNUG offline"
     }
 
   ]

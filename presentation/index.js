@@ -69,7 +69,7 @@ const speakers = [
 ];
 
 const thisMonth = {
-  title: "#67 - September 2017"
+  title: "#66 - September 2017"
 };
 
 const nextMonth = {
@@ -176,6 +176,7 @@ export default class Presentation extends React.Component {
         <SpeakerSlide speaker={speakers[0]} />
 
         <Slide>
+        <Image src={images.logo} margin="0px auto 0px" height="200px"/>
           <Heading size={3} textColor="secondary" margin={50}>Community Announcements</Heading>
           <Heading size={5} textColor="secondary">Who? What? Contact details?</Heading>
           <Heading size={5} textColor="secondary">Hiring?</Heading>
@@ -188,6 +189,7 @@ export default class Presentation extends React.Component {
         }
 
         <Slide>
+        <Image src={images.logo} margin="0px auto 0px" height="200px"/>
           <Heading size={3} textColor="secondary">Get Involved</Heading>
             <Heading size="5" textColor="secondary">Feedback<br/><Code type="bold" textColor="secondary">github.com/lnug/feedback</Code></Heading>
             <Heading size="5" textColor="secondary">Gitter<br/><Code type="bold" textColor="secondary">gitter.com/lnug/discuss</Code></Heading>

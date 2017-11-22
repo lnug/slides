@@ -49,24 +49,44 @@ const theme = createTheme({
 });
 
 const emcee = {
-  name: "Laszlo",
-  twitter: "lazlojuly"
+  name: "Adam",
+  twitter: "admataz"
 };
 
 const speakers = [
   {
-    name: "Anna Doubkova",
-    title: "Node microservices at Pizza Hut"
+    name: "Bartlomiej Specjalny",
+    title: "Scalable Scraping in Node and a bit of GO ",
+    twitter: "",
+    github: "sp3c1 "
   },
   {
-    name: "Bruno Godefroy",
-    title: "Do not yield to javascript generators!"
-  },
-  {
-    name: "Zaiste",
-    title: "Rapid web development with Huncwot & Marko"
+    name: "James Porter,  David Scheiner, who else? ",
+    title: "Node.js Lightning talks",
+    twitter: "",
+    github: ""
   }
 ];
+
+const thisMonth = {
+  title: "#67 - October 2017"
+};
+
+const nextMonth = {
+  date: "22nd November 2017",
+  speakers: [
+    {
+      name: "Bernard Baker",
+      title: "Building an Electron application with NodeJS"
+    },
+    {
+      name: "Simon McManus",
+      title: "Taking LNUG offline"
+    }
+
+  ]
+
+}
 
 
 class SpeakerSlide extends React.Component {
@@ -97,10 +117,19 @@ export default class Presentation extends React.Component {
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme} progress={"none"}>
         <Slide align={"center center"}>
          <Image src={images.logo} margin="0px auto 0px" height="200px"/>
-         <Heading size={6} textColor="secondary">#65 - June 2017</Heading>
+         <Heading size={6} textColor="secondary">{thisMonth.title}</Heading>
             {speakers.map((speaker) =>
-              <Text key={speaker.title} textColor="secondary" textSize={30}>
-                {speaker.name} <S type="italics"> - {speaker.title}</S>
+              <Text key={speaker.title} textColor="secondary" textSize={30} margin="10px 0">
+                {speaker.name} <S type="italics"> - {speaker.title} </S>
+                  <Text textColor="secondary" textSize={20}>
+                  {speaker.twitter &&
+                    <span>Twitter: @{speaker.twitter} </span>
+                  }
+
+                  {speaker.github &&
+                    <span>Github: @{speaker.github}</span>
+                  }
+                  </Text>
               </Text>
             )}
         </Slide>
@@ -147,6 +176,7 @@ export default class Presentation extends React.Component {
         <SpeakerSlide speaker={speakers[0]} />
 
         <Slide>
+        <Image src={images.logo} margin="0px auto 0px" height="200px"/>
           <Heading size={3} textColor="secondary" margin={50}>Community Announcements</Heading>
           <Heading size={5} textColor="secondary">Who? What? Contact details?</Heading>
           <Heading size={5} textColor="secondary">Hiring?</Heading>
@@ -154,9 +184,12 @@ export default class Presentation extends React.Component {
           <Heading size={5} textColor="secondary">Have something to share?</Heading>
         </Slide>
 
+        {speakers.length > 1 &&
         <SpeakerSlide speaker={speakers[1]} />
+        }
 
         <Slide>
+        <Image src={images.logo} margin="0px auto 0px" height="200px"/>
           <Heading size={3} textColor="secondary">Get Involved</Heading>
             <Heading size="5" textColor="secondary">Feedback<br/><Code type="bold" textColor="secondary">github.com/lnug/feedback</Code></Heading>
             <Heading size="5" textColor="secondary">Gitter<br/><Code type="bold" textColor="secondary">gitter.com/lnug/discuss</Code></Heading>
@@ -171,7 +204,14 @@ export default class Presentation extends React.Component {
         <Slide>
            <Image src={images.logo} margin="0px auto 0px" height="200px"/>
           <Heading size={3} textColor="secondary" margin={40}>Next Time</Heading>
-          <Heading size={4} textColor="secondary">27th September 2017</Heading>
+          <Heading size={4} textColor="secondary">{nextMonth.date}</Heading>
+          <List margin="20px 10%">
+          {nextMonth.speakers.map((speaker) =>
+            <ListItem key={speaker.title} textColor="secondary" textSize={30} margin="20px 0">
+              {speaker.name} <S type="italics"> - {speaker.title}</S>
+            </ListItem>
+          )}
+          </List>
           <Code textColor="secondary" bold>
             meetup.com/london-nodejs
           </Code>
@@ -191,8 +231,10 @@ export default class Presentation extends React.Component {
           </Text>
           <Image src={images.cheers.replace("/", "")} margin="40px auto 0px" height="200px"/>
         </Slide>
-
-        <SpeakerSlide speaker={speakers[2]} />
+       
+        {speakers.length > 2 &&
+          <SpeakerSlide speaker={speakers[2]} />
+        }
 
         <Slide>
           <Heading size={3} textColor="secondary">Thank You</Heading>

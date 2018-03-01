@@ -38,7 +38,8 @@ const images = {
   tiroLogo: require("../assets/tiro_logo.jpg"),
   pusherLogo: require("../assets/pusher_logo_white.png"),
   pizza: require("../assets/pizza-1.gif"),
-  cheers: require("../assets/cheers.gif")
+  cheers: require("../assets/cheers.gif"),
+  simon: require("../assets/simon.png"),
 };
 
 preloader(images);
@@ -214,6 +215,15 @@ export default class Presentation extends React.Component {
 
 
         <SpeakerSlide speaker={speakers[0]} />
+
+        <Slide>
+          <Image src={images.logo} margin="0px auto 0px" height="200px"/>
+          <Heading size={3} textColor="highlight" margin={50}>Simon's hot tips</Heading>
+        </Slide>
+
+        <Slide>
+          <Image src={images.simon} margin="0px auto 0px" height="400px"/>
+        </Slide>
 
         <Slide>
         <Image src={images.logo} margin="0px auto 0px" height="200px"/>

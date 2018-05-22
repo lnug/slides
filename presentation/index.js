@@ -35,11 +35,11 @@ const { PropTypes } = React;
 const images = {
   logo: require("../assets/lnug-logo.svg"),
   makersLogo: require("../assets/makers_logo.png"),
-  tiroLogo: require("../assets/tiro_logo.jpg"),
+  nearFormLogo: require("../assets/nearform.jpg"),
   pusherLogo: require("../assets/pusher_logo_white.png"),
   pizza: require("../assets/pizza-1.gif"),
   cheers: require("../assets/cheers.gif"),
-  simon: require("../assets/simon.png"),
+  simon: require("../assets/simon.png")
 };
 
 preloader(images);
@@ -54,53 +54,59 @@ const theme = createTheme({
 });
 
 const emcee = {
-  name: "Clarkie",
-  twitter: "clarkieclarkie"
+  name: "Adam",
+  twitter: "admataz"
 };
 
 
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
-    {
-        "apiSpeakerUrl": "https://api.github.com/users/theninj4",
-        "speakerUrl": "https://github.com/theninj4",
-        "title": "Cultivating a Microservice Culture with Node.js",
-        "description": "<p>We&#39;ve spent the last 14 months working with Node.js to migrate the Holiday Extras engineering team away from Node.js monolith applications and over to Node.js microservices. Node.js is the heart and soul of the operation and the time has come to share how it&#39;s taken us above and beyond our wildest dreams. In this talk I&#39;ll be sharing how we&#39;re using Node.js throughout our stack, some of the key projects we&#39;ve built and the problems they solve, and how to really make the most out of Node.js to build an incredibly powerful engineering experience. </p>\n<p>I&#39;m a software engineer in the tech-foundations pod at <a href=\"http://join.holidayextras.co.uk/\">Holiday Extras</a> with a remit to improve the efficiency of our engineering team. I&#39;ve been writing Node.js day-in-day-out for over 5 years and dabble with infrastructure on the side.</p>\n",
-        "milestone": "February 28th 2018",
-        "img": "https://avatars2.githubusercontent.com/u/3055120?v=4",
-        "handle": "theninj4",
-        "name": "Oliver Rumbelow"
-    },
-    {
-        "apiSpeakerUrl": "https://api.github.com/users/thanpolas",
-        "speakerUrl": "https://github.com/thanpolas",
-        "title": "Classical Inheritance in Javascript",
-        "description": "<p>Javascript inheritance has always been a challenging issue for new and seasoned developers. In this talk, we will dive deep into the inner workings of Javascript inheritance and see the beauty of prototypical inheritance and the prototype chain. While this is a classic talk, it is particularly relevant to the current debate in the React community over the use of fat arrow vs pre-bounded methods.&#10;<a href=\"https://speakerdeck.com/thanpolas/classical-inheritance-in-javascript\">Talk slides</a></p>\n<p>Github: <a href=\"https://github.com/thanpolas\">thanpolas</a>, Twitter: <a href=\"https://twitter.com/thanpolas\">@thanpolas</a>, <a href=\"http://www.linkedin.com/in/thanpolas\">LinkedIn</a>, <a href=\"http://thanpol.as\">website</a></p>\n",
-        "milestone": "February 28th 2018",
-        "img": "https://avatars1.githubusercontent.com/u/458813?v=4",
-        "handle": "thanpolas",
-        "name": "Thanasis Polychronakis"
-    }
+  {
+    "apiSpeakerUrl": "https://api.github.com/users/mcollina",
+    "speakerUrl": "https://github.com/mcollina",
+    "title": "My Node.js process is on Fire",
+    "description": "<p>At 10am on Black Friday, your phone rings: the new JS application you deployed came under too much load, and the site has gone down! Your employer is losing sales opportunities... your employer is losing money!</p>\n<p>But you don&rsquo;t lose your cool. You log into your cloud provider and tweak your autoscaling settings. Now the deployment can handle the load spike but with four times the number of servers, which is four times the cost.</p>\n<p>The next day, you try to analyze what happened and begin to optimize your application to prepare for future load spikes. </p>\n<p>This talk is a journey into the world of Node.js performance, taking a look at the available tools and optimization techniques inspired by insight gained from glimpsing under the hood of Node and V8.</p>\n<h3 id=\"bio\">Bio</h3>\n<p>Matteo is a code pirate and mad scientist. He spends most of his days programming in Node.js, but in the past he worked with Ruby, Java and Objective-C. In 2014, he defended his Ph.D. thesis titled &quot;Application Platforms for the Internet of Things&quot;. Now he is a Principal Architect at <a href=\"http://nearform.com\">nearForm</a>, where he consults for the top brands of the world.&#10;Matteo is also the author of the Node.js MQTT Broker, <a href=\"http://mosca.io\">Mosca</a>, the fast logger <a href=\"https://github.com/mcollina/pino\">Pino</a> and of the <a href=\"https://www.fastify.io\">Fastify</a> web framework. Matteo is also a member of the Node.js Technical Steering Committee. Matteo spoke at several international conferences: Node.js Interactive, NodeConf.eu, NodeSummit, JSConf.Asia, WebRebels, and JsDay to name a few. He is also co-author of the book &quot;Node.js Cookbook, Third Edition&quot; edited by Packt. &#10;In the summer he loves sailing the <em>Sirocco</em>.</p>\n<p>Twitter handle: <a href=\"https://twitter.com/matteocollina\">@matteocollina</a></p>\n",
+    "milestone": "March 28th 2018",
+    "img": "https://avatars0.githubusercontent.com/u/52195?v=4",
+    "handle": "mcollina",
+    "name": "Matteo Collina"
+  },
+  {
+      "apiSpeakerUrl": "https://api.github.com/users/claudiamatosa",
+      "speakerUrl": "https://github.com/claudiamatosa",
+      "title": "Internal Server Error",
+      "description": "<p>Who hasn&#39;t found themselves in despair after hours of trying to debug a problem that seemed simple, because halfway down the line the stack trace ended in a file called <code>throw-error.js</code>, or simply there were no errors thrown and the code just didn&#39;t work as expected?</p>\n<p>The talk will last between 15 and 20 minutes, will be structured in two parts and there will be plenty of gifs and emojis. It should cover errors in Node and browsers.</p>\n<h3 id=\"1-common-bad-error-handling-scenarios\">1. Common bad error handling scenarios</h3>\n<ul>\n<li>Stacktrace lost.</li>\n<li>Code exits without error.</li>\n<li>Generic error messages (<code>something has failed</code>).</li>\n<li>...</li>\n</ul>\n<h3 id=\"2-exploring-possible-solutions-examples-\">2. Exploring possible solutions (examples)</h3>\n<ul>\n<li>Custom errors.</li>\n<li>Formatting error api responses.</li>\n<li>Displaying errors in the UI.</li>\n<li>Examples when using Apollo (GraphQL), React and maybe other tools.</li>\n</ul>\n<p>Conclusion: your library/utility/api should be built around its users, and they shouldn&#39;t need to read the code to know why something is wrong.</p>\n<p>(I&#39;m really bad with titles &#55357;&#56883;)</p>\n<p>I&#39;m a freelance front-end developer, currently working with React and GraphQL.&#10;<a href=\"twitter.com/claudiamatosa\">twitter</a> | <a href=\"github.com/claudiamatosa\">github</a></p>\n",
+      "milestone": "March 28th 2018",
+      "img": "https://avatars1.githubusercontent.com/u/5296066?v=4",
+      "handle": "claudiamatosa",
+      "name": "Claudia Matosa"
+  },
+  {
+      "apiSpeakerUrl": "https://api.github.com/users/theburningmonk",
+      "speakerUrl": "https://github.com/theburningmonk",
+      "title": "Serverless in production, an experience report",
+      "description": "<p>AWS Lambda has changed the way we deploy and run software, but this new serverless paradigm has created new challenges to old problems - how do you test a cloud-hosted function locally? How do you monitor them? What about logging and config management? And how do we start migrating from existing architectures? </p>\n<p>In this talk Yan will discuss solutions to these challenges by drawing from real-world experience running Lambda in production and migrating from an existing monolithic architecture.</p>\n<h3 id=\"about-me-\">About me:</h3>\n<p>Yan (@theburningmonk) is a polyglot developer and architect, he is a regular speaker at user groups and conferences internationally. Yan is the author of <code>AWS Lambda in Motion</code>, a co-author of <code>F# Deep Dives</code>, and he keeps an active blog at <a href=\"http://theburningmonk.com\">http://theburningmonk.com</a> where he shares his thoughts on topics such as AWS, serverless, functional programming and chaos engineering.</p>\n<p>my co-speaker is <strong>Scott Smethurst</strong> : Scott&rsquo;s passion for computing began when he was gifted a Commodore 64 for Christmas in 1988 and really took hold while studying Computer Science at the University of Manchester. He&rsquo;s been an architect, lead developer and consultant within a variety of industries, working with organisations ranging from a multi-billion pound corporation to a failed start-up. Scott has spent most of the past 2 years designing and building several serverless architectures and has decided to start sharing some of those experiences.</p>\n",
+      "milestone": "March 28th 2018",
+      "img": "https://avatars3.githubusercontent.com/u/546969?v=4",
+      "handle": "theburningmonk",
+      "name": "Yan Cui & Scott Smethurst"
+  }
 ];
 
 const thisMonth = {
-  title: "#70 - February 2018"
+  title: "#71 - March 2018"
 };
 
 const nextMonth = {
-  date: "28th March 2018",
+  date: "25th April 2018",
   speakers: [
     {
-      name: "Claudia Matosa",
-      title: "Internal Server Error"
+      name: "Paul Jensen",
+      title: "End-to-end testing Single Page Apps and APIs with Cucumber.js & Puppeteer"
     },
     {
-      name: "Matteo Collina",
-      title: "My Node.js process is on Fire"
-    },
-    {
-      name: "Yan Cui",
-      title: "Serverless in production, an experience report"
+      name: "Maybe you.... ?",
+      title: "share your dev stories"
     }
   ]
 
@@ -204,7 +210,7 @@ export default class Presentation extends React.Component {
 
         <Slide id={"pizza-and-beer"}>
           <Heading size={3} textColor="secondary">Pizza and beer</Heading>
-          <Image src={images.tiroLogo.replace("/", "")} margin="0px auto 40px" height="293px"/>
+          <Image src={images.nearFormLogo.replace("/", "")} margin="0px auto 40px" height="293px"/>
         </Slide>
 
         <Slide id={"video-production"}>
@@ -216,14 +222,6 @@ export default class Presentation extends React.Component {
 
         <SpeakerSlide speaker={speakers[0]} />
 
-        <Slide>
-          <Image src={images.logo} margin="0px auto 0px" height="200px"/>
-          <Heading size={3} textColor="highlight" margin={50}>Simon's hot tips</Heading>
-        </Slide>
-
-        <Slide>
-          <Image src={images.simon} margin="0px auto 0px" height="400px"/>
-        </Slide>
 
         <Slide>
         <Image src={images.logo} margin="0px auto 0px" height="200px"/>
@@ -268,6 +266,7 @@ export default class Presentation extends React.Component {
             </ListItem>
           )}
           </List>
+
           <Code textColor="secondary" bold>
             meetup.com/london-nodejs
           </Code>
@@ -275,7 +274,23 @@ export default class Presentation extends React.Component {
             The 4th Wednesday of the month
           </Text>
         </Slide>
-
+       
+       
+        <Slide>
+        <Image src={images.logo} margin="10px" height="153px"/>
+        <Heading size={3} textColor="highlight" >Thank You</Heading>
+        <Heading size={5} textColor="secondary">Had a great time? Let us know!</Heading>
+        <Text textColor="secondary">github.com/lnug/feedback</Text>
+        
+        <br />and thanks again...<br />
+        
+        <Image src={images.makersLogo.replace("/", "")} margin="10px" height="63px"/>
+        <Image src={images.nearFormLogo.replace("/", "")} margin="10px" height="63px"/>
+        <Image src={images.pusherLogo.replace("/", "")} margin="10px" height="63px"/>
+    
+          </Slide>
+       
+       
         <Slide>
           <Heading size={3} textColor="secondary" margin={30}>After Party</Heading>
           <Heading size={5} textColor="secondary">The Culpeper</Heading>
@@ -286,24 +301,15 @@ export default class Presentation extends React.Component {
             http://theculpeper.com/pub/
           </Text>
           <Image src={images.cheers.replace("/", "")} margin="40px auto 0px" height="200px"/>
+          <Heading size={5} textColor="highlight" >Before you go...</Heading>
+          
+          Rubbish in Bins,
+          Stack chairs against walls,
+          Get involved!
+      
+
         </Slide>
 
-
-        <Slide>
-          <Heading size={3} textColor="secondary">Thank You</Heading>
-          <Heading size={5} textColor="secondary">Had a great time? Let us know!</Heading>
-          <Text textColor="secondary">github.com/lnug/feedback</Text>
-          <Heading size={5} textColor="secondary" margin={"40px 0 0 0"}>Brought to you by</Heading>
-          <List margin="20px 0 0 0">
-            <ListItem>Makers Academy</ListItem>
-            <ListItem>Tiro Partners</ListItem>
-            <ListItem>Pusher</ListItem>
-            <ListItem>github.com/orgs/lnug/people</ListItem>
-          </List>
-            Rubbish in Bins,
-            Stack chairs against walls,
-            Get involved!
-        </Slide>
 
       </Deck>
     );

@@ -34,12 +34,11 @@ const { PropTypes } = React;
 
 const images = {
   logo: require("../assets/lnug-logo.svg"),
-  makersLogo: require("../assets/makers_logo.png"),
   nearFormLogo: require("../assets/nearform.jpg"),
   pusherLogo: require("../assets/pusher_logo_white.png"),
   pizza: require("../assets/pizza-1.gif"),
   cheers: require("../assets/cheers.gif"),
-  simon: require("../assets/simon.png")
+  condeNastLogo: require("../assets/conde_nast_logo.jpg")
 };
 
 preloader(images);
@@ -54,62 +53,43 @@ const theme = createTheme({
 });
 
 const emcee = {
-  name: "Adam",
-  twitter: "admataz"
+  name: "Claire",
+  twitter: "claireinez"
 };
 
 
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
   {
-    "apiSpeakerUrl": "https://api.github.com/users/mcollina",
-    "speakerUrl": "https://github.com/mcollina",
-    "title": "My Node.js process is on Fire",
-    "description": "<p>At 10am on Black Friday, your phone rings: the new JS application you deployed came under too much load, and the site has gone down! Your employer is losing sales opportunities... your employer is losing money!</p>\n<p>But you don&rsquo;t lose your cool. You log into your cloud provider and tweak your autoscaling settings. Now the deployment can handle the load spike but with four times the number of servers, which is four times the cost.</p>\n<p>The next day, you try to analyze what happened and begin to optimize your application to prepare for future load spikes. </p>\n<p>This talk is a journey into the world of Node.js performance, taking a look at the available tools and optimization techniques inspired by insight gained from glimpsing under the hood of Node and V8.</p>\n<h3 id=\"bio\">Bio</h3>\n<p>Matteo is a code pirate and mad scientist. He spends most of his days programming in Node.js, but in the past he worked with Ruby, Java and Objective-C. In 2014, he defended his Ph.D. thesis titled &quot;Application Platforms for the Internet of Things&quot;. Now he is a Principal Architect at <a href=\"http://nearform.com\">nearForm</a>, where he consults for the top brands of the world.&#10;Matteo is also the author of the Node.js MQTT Broker, <a href=\"http://mosca.io\">Mosca</a>, the fast logger <a href=\"https://github.com/mcollina/pino\">Pino</a> and of the <a href=\"https://www.fastify.io\">Fastify</a> web framework. Matteo is also a member of the Node.js Technical Steering Committee. Matteo spoke at several international conferences: Node.js Interactive, NodeConf.eu, NodeSummit, JSConf.Asia, WebRebels, and JsDay to name a few. He is also co-author of the book &quot;Node.js Cookbook, Third Edition&quot; edited by Packt. &#10;In the summer he loves sailing the <em>Sirocco</em>.</p>\n<p>Twitter handle: <a href=\"https://twitter.com/matteocollina\">@matteocollina</a></p>\n",
-    "milestone": "March 28th 2018",
-    "img": "https://avatars0.githubusercontent.com/u/52195?v=4",
-    "handle": "mcollina",
-    "name": "Matteo Collina"
+    "apiSpeakerUrl": "https://api.github.com/users/paulbjensen",
+    "speakerUrl": "https://github.com/paulbjensen",
+    "title": "Objection.js, a SQL ORM",
+    "description": "<p>Objection.js is a SQL ORM (Object Relational mapping) for Node.js.</p>\n<p>In this talk, I will walk you through how the module works, show live examples of it in action, and present the case for considering it in your Node.js projects.</p>\n<p>Things that we&#39;ll cover are:</p>\n<ul>\n<li>Quick setup</li>\n<li>Creating the underlying database schema for your models via Knex.js</li>\n<li>Creating models and executing SQL queries via the models</li>\n<li>Implementing validation in your models with JSON schema</li>\n<li>Defining relationships between models</li>\n<li>Doing graph inserts and updates</li>\n<li>Setting up a GraphQL API with the objection-graphql plugin</li>\n<li>Other interesting objection.js plugins</li>\n</ul>\n<p>My name is Paul Jensen, I&#39;m the author of <a href=\"http://manning.com/books/cross-platform-desktop-applications\">Manning&#39;s &quot;Cross Platform Desktop Applications - Using Node, Electron, and NW.js&quot;</a>. You can find me on <a href=\"https://twitter.com/paulbjensen\">Twitter</a> and <a href=\"https://github.com/paulbjensen\">Github</a>.</p>\n",
+    "milestone": "May 23rd 2018",
+    "img": "https://avatars3.githubusercontent.com/u/3840?v=4",
+    "handle": "paulbjensen",
+    "name": "Paul Jensen",
+    "twitter": "paulbjensen"
   },
   {
-      "apiSpeakerUrl": "https://api.github.com/users/claudiamatosa",
-      "speakerUrl": "https://github.com/claudiamatosa",
-      "title": "Internal Server Error",
-      "description": "<p>Who hasn&#39;t found themselves in despair after hours of trying to debug a problem that seemed simple, because halfway down the line the stack trace ended in a file called <code>throw-error.js</code>, or simply there were no errors thrown and the code just didn&#39;t work as expected?</p>\n<p>The talk will last between 15 and 20 minutes, will be structured in two parts and there will be plenty of gifs and emojis. It should cover errors in Node and browsers.</p>\n<h3 id=\"1-common-bad-error-handling-scenarios\">1. Common bad error handling scenarios</h3>\n<ul>\n<li>Stacktrace lost.</li>\n<li>Code exits without error.</li>\n<li>Generic error messages (<code>something has failed</code>).</li>\n<li>...</li>\n</ul>\n<h3 id=\"2-exploring-possible-solutions-examples-\">2. Exploring possible solutions (examples)</h3>\n<ul>\n<li>Custom errors.</li>\n<li>Formatting error api responses.</li>\n<li>Displaying errors in the UI.</li>\n<li>Examples when using Apollo (GraphQL), React and maybe other tools.</li>\n</ul>\n<p>Conclusion: your library/utility/api should be built around its users, and they shouldn&#39;t need to read the code to know why something is wrong.</p>\n<p>(I&#39;m really bad with titles &#55357;&#56883;)</p>\n<p>I&#39;m a freelance front-end developer, currently working with React and GraphQL.&#10;<a href=\"twitter.com/claudiamatosa\">twitter</a> | <a href=\"github.com/claudiamatosa\">github</a></p>\n",
-      "milestone": "March 28th 2018",
-      "img": "https://avatars1.githubusercontent.com/u/5296066?v=4",
-      "handle": "claudiamatosa",
-      "name": "Claudia Matosa"
-  },
-  {
-      "apiSpeakerUrl": "https://api.github.com/users/theburningmonk",
-      "speakerUrl": "https://github.com/theburningmonk",
-      "title": "Serverless in production, an experience report",
-      "description": "<p>AWS Lambda has changed the way we deploy and run software, but this new serverless paradigm has created new challenges to old problems - how do you test a cloud-hosted function locally? How do you monitor them? What about logging and config management? And how do we start migrating from existing architectures? </p>\n<p>In this talk Yan will discuss solutions to these challenges by drawing from real-world experience running Lambda in production and migrating from an existing monolithic architecture.</p>\n<h3 id=\"about-me-\">About me:</h3>\n<p>Yan (@theburningmonk) is a polyglot developer and architect, he is a regular speaker at user groups and conferences internationally. Yan is the author of <code>AWS Lambda in Motion</code>, a co-author of <code>F# Deep Dives</code>, and he keeps an active blog at <a href=\"http://theburningmonk.com\">http://theburningmonk.com</a> where he shares his thoughts on topics such as AWS, serverless, functional programming and chaos engineering.</p>\n<p>my co-speaker is <strong>Scott Smethurst</strong> : Scott&rsquo;s passion for computing began when he was gifted a Commodore 64 for Christmas in 1988 and really took hold while studying Computer Science at the University of Manchester. He&rsquo;s been an architect, lead developer and consultant within a variety of industries, working with organisations ranging from a multi-billion pound corporation to a failed start-up. Scott has spent most of the past 2 years designing and building several serverless architectures and has decided to start sharing some of those experiences.</p>\n",
-      "milestone": "March 28th 2018",
-      "img": "https://avatars3.githubusercontent.com/u/546969?v=4",
-      "handle": "theburningmonk",
-      "name": "Yan Cui & Scott Smethurst"
+    "apiSpeakerUrl": "https://api.github.com/users/erankeren",
+    "speakerUrl": "https://github.com/erankeren",
+    "title": "ExpressLess - 200 OK",
+    "description": "<p>Heard about Serverless? Already know Express.js? Too afraid to use the two? </p>\n<p>My talk will last ~20 mins and will cover the following:</p>\n<ul>\n<li><p>Where are my servers? (Moving from the classic setup to a serverless one)</p>\n</li>\n<li><p>Express.js + Serverless?</p>\n</li>\n<li><p>How can I test my serverless app? (Offline testing)</p>\n</li>\n<li><p>Where are my logs?</p>\n</li>\n<li><p>Wait, are my apis public? (Securing your endpoints)</p>\n</li>\n<li><p>Shhhhh....(Keeping secrets)</p>\n</li>\n</ul>\n<h3 id=\"about-me-\">About me:</h3>\n<p>I started my career over a decade ago writing code for firewalls and security systems (c/c++/java). In recent years I&#39;ve been specialising in cloud engineering, microservices, aws and serverless (mostly in node.js).</p>\n<p>Now: I&#39;m the CTO of a young and still in stealth mode startup - <a href=\"http://sourcingbot.com\">sourcingbot.com</a></p>\n",
+    "milestone": "May 23rd 2018",
+    "img": "https://avatars3.githubusercontent.com/u/16254901?v=4",
+    "handle": "erankeren",
+    "name": "Eran Keren"
   }
 ];
 
 const thisMonth = {
-  title: "#71 - March 2018"
+  title: "#73 - May 2018"
 };
 
 const nextMonth = {
-  date: "25th April 2018",
-  speakers: [
-    {
-      name: "Paul Jensen",
-      title: "End-to-end testing Single Page Apps and APIs with Cucumber.js & Puppeteer"
-    },
-    {
-      name: "Maybe you.... ?",
-      title: "share your dev stories"
-    }
-  ]
-
+  date: "27th June 2018",
+  speakers: []
 };
 
 
@@ -169,12 +149,12 @@ export default class Presentation extends React.Component {
 
         <Slide id={"safety"}>
           <Heading size={3} lineHeight={3} textColor="secondary">Important</Heading>
-          <Appear><Heading size={5} textColor="secondary">🚒 Fire Exits: stairs behind you </Heading></Appear>
-          <Appear><Heading size={5} textColor="secondary">🚻 Toilets: towards the lifts </Heading></Appear>
-          <Appear><Heading size={5} textColor="secondary">📡 Wifi <Code textColor="secondary">makersWelcome</Code> </Heading></Appear>
+          <Appear><Heading size={5} textColor="secondary">🚻 Toilets: ask for a pass </Heading></Appear>
+          <Appear><Heading size={5} textColor="secondary">🚒 Fire Exits: next to the toilets </Heading></Appear>
+          <Appear><Heading size={5} textColor="secondary">📡 Wifi <Code textColor="secondary">CN Guest</Code> </Heading></Appear>
         </Slide>
 
-        <Slide>
+        <Slide id="code-of-conduct">
           <Heading size={5} textColor="secondary">⭐️ Code of Conduct </Heading>
           <Appear>
           <BlockQuote>
@@ -186,6 +166,16 @@ export default class Presentation extends React.Component {
           </Appear>
           <Appear>
           <Text textColor="secondary">lnug.org/code-of-conduct.html</Text>
+          </Appear>
+        </Slide>
+
+        <Slide id="reminder">
+          <Heading size={5} textColor="secondary">💡 A reminder </Heading>
+          <Appear>
+            <Text textColor="secondary">
+              <p>No Q&A - chat in the breaks instead</p>
+              <p>Please don't interrupt the speaker</p>
+            </Text>
           </Appear>
         </Slide>
 
@@ -205,11 +195,11 @@ export default class Presentation extends React.Component {
 
         <Slide id={"venue"}>
           <Heading size={3} textColor="secondary">Venue</Heading>
-          <Image src={images.makersLogo.replace("/", "")} margin="0px auto 40px" height="293px"/>
+          <Image src={images.condeNastLogo.replace("/", "")} margin="0px auto 40px" width="800px"/>
         </Slide>
 
-        <Slide id={"pizza-and-beer"}>
-          <Heading size={3} textColor="secondary">Pizza and beer</Heading>
+        <Slide id={"food-and-drink"}>
+          <Heading size={3} textColor="secondary">Food and drink</Heading>
           <Image src={images.nearFormLogo.replace("/", "")} margin="0px auto 40px" height="293px"/>
         </Slide>
 
@@ -226,7 +216,6 @@ export default class Presentation extends React.Component {
         <Slide>
         <Image src={images.logo} margin="0px auto 0px" height="200px"/>
           <Heading size={3} textColor="highlight" margin={50}>Community Announcements</Heading>
-          <Heading size={5} textColor="secondary">Who? What? Contact details?</Heading>
           <Heading size={5} textColor="secondary">Hiring?</Heading>
           <Heading size={5} textColor="secondary">Available for hire?</Heading>
           <Heading size={5} textColor="secondary">Have something to share?</Heading>
@@ -245,7 +234,7 @@ export default class Presentation extends React.Component {
 
         <Slide>
              <Image src={images.logo} margin="0px auto 0px" height="200px"/>
-            <Heading size={3} textColor="highlight">submit a talk proposal!</Heading>
+            <Heading size={3} textColor="highlight">Submit a talk proposal!</Heading>
             <Code type="bold" textColor="secondary">github.com/lnug/speakers</Code>
         </Slide>
 
@@ -274,39 +263,35 @@ export default class Presentation extends React.Component {
             The 4th Wednesday of the month
           </Text>
         </Slide>
-       
-       
+
+
         <Slide>
         <Image src={images.logo} margin="10px" height="153px"/>
         <Heading size={3} textColor="highlight" >Thank You</Heading>
         <Heading size={5} textColor="secondary">Had a great time? Let us know!</Heading>
         <Text textColor="secondary">github.com/lnug/feedback</Text>
-        
+
         <br />and thanks again...<br />
-        
-        <Image src={images.makersLogo.replace("/", "")} margin="10px" height="63px"/>
+
+        <Image src={images.condeNastLogo.replace("/", "")} margin="10px" height="63px"/>
         <Image src={images.nearFormLogo.replace("/", "")} margin="10px" height="63px"/>
         <Image src={images.pusherLogo.replace("/", "")} margin="10px" height="63px"/>
-    
+
           </Slide>
-       
-       
+
+
         <Slide>
           <Heading size={3} textColor="secondary" margin={30}>After Party</Heading>
-          <Heading size={5} textColor="secondary">The Culpeper</Heading>
+          <Heading size={5} textColor="secondary">Coal Hole</Heading>
           <Text textColor="secondary" margin={10}>
-            40 Commercial Street, London, E1 6LP
-          </Text>
-          <Text textColor="secondary" margin={10}>
-            http://theculpeper.com/pub/
+            91-92 Strand, London WC2R 0DW
           </Text>
           <Image src={images.cheers.replace("/", "")} margin="40px auto 0px" height="200px"/>
           <Heading size={5} textColor="highlight" >Before you go...</Heading>
-          
-          Rubbish in Bins,
-          Stack chairs against walls,
+
+          Tidy up after yourself!
           Get involved!
-      
+
 
         </Slide>
 

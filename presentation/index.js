@@ -35,6 +35,7 @@ const { PropTypes } = React;
 const images = {
   logo: require("../assets/lnug-logo.svg"),
   nearFormLogo: require("../assets/nearform.jpg"),
+  nearFormHiring: require("../assets/nearform_hiring.jpg"),
   pusherLogo: require("../assets/pusher_logo_white.png"),
   pizza: require("../assets/pizza-1.gif"),
   cheers: require("../assets/cheers.gif"),
@@ -212,6 +213,8 @@ export default class Presentation extends React.Component {
         <Slide id={"food-and-drink"}>
           <Heading size={3} textColor="secondary">Food and drink</Heading>
           <Image src={images.nearFormLogo.replace("/", "")} margin="0px auto 40px" height="293px"/>
+          {' '}
+          <Image src={images.nearFormHiring.replace("/", "")} margin="0px auto 40px" height="293px"/>
         </Slide>
 
         <Slide id={"video-production"}>

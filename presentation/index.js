@@ -80,7 +80,7 @@ const speakers = [
     "milestone": "May 23rd 2018",
     "img": "https://avatars3.githubusercontent.com/u/133139?s=400&v=4",
     "handle": "sielay",
-    "name": "Lukasz Marek ",
+    "name": "Łukasz Marek Sielski",
     "twitter": "sielay"
   },
   {

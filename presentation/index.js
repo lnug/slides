@@ -72,6 +72,17 @@ const speakers = [
     "twitter": "paulbjensen"
   },
   {
+    "apiSpeakerUrl": "https://api.github.com/users/sielay",
+    "speakerUrl": "https://github.com/sielay",
+    "title": "WHAT IF WE <JSX/> DEVOPS",
+    "description": "<p>A small crazy science experiment ~failed~</p>",
+    "milestone": "May 23rd 2018",
+    "img": "https://avatars3.githubusercontent.com/u/133139?s=400&v=4",
+    "handle": "sielay",
+    "name": "Lukasz Marek ",
+    "twitter": "sielay"
+  },
+  {
     "apiSpeakerUrl": "https://api.github.com/users/erankeren",
     "speakerUrl": "https://github.com/erankeren",
     "title": "ExpressLess - 200 OK",

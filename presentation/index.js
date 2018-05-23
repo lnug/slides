@@ -218,6 +218,17 @@ export default class Presentation extends React.Component {
           <Heading size={3} textColor="secondary">Video</Heading>
           <Image src={images.pusherLogo.replace("/", "")} margin="0px auto 40px" height="293px"/>
         </Slide>
+
+        <Slide id={"announcements"}>
+          <Heading size={3} textColor="highlight">Announcements</Heading>
+          <Text textColor="secondary" textSize={38} margin="20px 0">
+            ServerlessDays tickets!
+          </Text>
+          <Text textColor="secondary" textSize={30} margin="20px 0">
+            (thank you @mattjbatchelor)
+          </Text>
+        </Slide>
+
         <SummarySlide />
 
 

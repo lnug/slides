@@ -54,47 +54,47 @@ const theme = createTheme({
 });
 
 const emcee = {
-  name: "Adam",
-  twitter: "admataz"
+  name: "Marco",
+  twitter: "bettiolo"
 };
 
 
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
   {
-    "apiSpeakerUrl": "https://api.github.com/users/TomShacham",
-    "speakerUrl": "https://github.com/TomShacham",
-    "title": "http4js: a whirlwind tour",
-    "milestone": "June 27th 2018",
-    "img": "https://avatars0.githubusercontent.com/u/5289332?v=4",
-    "handle": "TomShacham",
-    "name": "Tom Shacham"
+    "apiSpeakerUrl": "https://api.github.com/users/sevki",
+    "speakerUrl": "https://github.com/sevki",
+    "title": "GraphQL on the Edge",
+    "milestone": "August 22nd 2018",
+    "img": "https://avatars3.githubusercontent.com/u/429977?v=4",
+    "handle": "Sevki",
+    "name": "Sevki"
   },
   {
-    "apiSpeakerUrl": "https://api.github.com/users/stephendeyoung",
-    "speakerUrl": "https://github.com/stephendeyoung",
-    "title": "Managing cloud resources in a distributed and fault-tolerant manner with EVRYTHNG's resource manager",
-    "milestone": "June 27th 2018",
-    "img": "https://avatars2.githubusercontent.com/u/738733?v=4",
-    "handle": "stephendeyoung",
-    "name": "Stephen Young"
+    "apiSpeakerUrl": "https://api.github.com/users/davidmarkclements",
+    "speakerUrl": "https://github.com/davidmarkclements",
+    "title": "A New Way to Profile Node.js",
+    "milestone": "August 22nd 2018",
+    "img": "https://avatars1.githubusercontent.com/u/1190716?v=4",
+    "handle": "davidmarkclements",
+    "name": "David Mark Clements"
   }
 ];
 
 const thisMonth = {
-  title: "#74 - June 2018"
+  title: "#76 - August 2018"
 };
 
 const nextMonth = {
-  date: "25th July 2018",
+  date: "26th Sept 2018",
   speakers: [
     {
-      name: "James Porter",
-      title: "Elm: your next programming language?"
+      name: "TBD",
+      title: "-"
     },
     {
-      name: "Bartlomiej Specjalny",
-      title: "Scheduled Messaging with RMQ, Redis, Postgres"
+      name: "-",
+      title: "TBD"
     }
 
   ]
@@ -165,7 +165,7 @@ export default class Presentation extends React.Component {
           <Heading size={3} lineHeight={3} textColor="secondary">Important</Heading>
           <Appear><Heading size={5} textColor="secondary">🚻 Toilets: ask for a pass </Heading></Appear>
           <Appear><Heading size={5} textColor="secondary">🚒 Fire Exits: next to the toilets </Heading></Appear>
-          <Appear><Heading size={5} textColor="secondary">📡 Wifi <Code textColor="secondary">CN Guest</Code> </Heading></Appear>
+          <Appear><Heading size={5} textColor="secondary">📡 Wifi: <Code textColor="secondary">CN Guest</Code> </Heading></Appear>
         </Slide>
 
         <Slide id="code-of-conduct">

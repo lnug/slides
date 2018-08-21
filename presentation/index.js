@@ -78,6 +78,15 @@ const speakers = [
     "img": "https://avatars1.githubusercontent.com/u/1190716?v=4",
     "handle": "davidmarkclements",
     "name": "David Mark Clements"
+  },
+  {
+    "apiSpeakerUrl": "https://api.github.com/users/framp",
+    "speakerUrl": "https://github.com/framp",
+    "title": "Zero Knowledge Proofs in Node.js",
+    "milestone": "August 22nd 2018",
+    "img": "https://avatars1.githubusercontent.com/u/611109?v=4",
+    "handle": "framp",
+    "name": "Federico Rampazzo"
   }
 ];
 

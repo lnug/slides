@@ -54,48 +54,39 @@ const theme = createTheme({
 });
 
 const emcee = {
-  name: "Marco",
-  twitter: "bettiolo"
+  name: "Adam",
+  twitter: "admataz"
 };
 
 
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
   {
-    "apiSpeakerUrl": "https://api.github.com/users/sevki",
-    "speakerUrl": "https://github.com/sevki",
-    "title": "GraphQL on the Edge",
-    "milestone": "August 22nd 2018",
-    "img": "https://avatars3.githubusercontent.com/u/429977?v=4",
-    "handle": "Sevki",
-    "name": "Sevki"
+    "apiSpeakerUrl": "https://api.github.com/users/somehats",
+    "speakerUrl": "https://github.com/somehats",
+    "title": "Intro to GraphQL",
+    "milestone": "26th September 2018",
+    "img": "https://avatars3.githubusercontent.com/u/1489520?v=4",
+    "handle": "somehats",
+    "name": "Alex Dytrych"
   },
   {
-    "apiSpeakerUrl": "https://api.github.com/users/davidmarkclements",
-    "speakerUrl": "https://github.com/davidmarkclements",
-    "title": "A New Way to Profile Node.js",
-    "milestone": "August 22nd 2018",
-    "img": "https://avatars1.githubusercontent.com/u/1190716?v=4",
-    "handle": "davidmarkclements",
-    "name": "David Mark Clements"
-  },
-  {
-    "apiSpeakerUrl": "https://api.github.com/users/framp",
-    "speakerUrl": "https://github.com/framp",
-    "title": "Zero Knowledge Proofs in Node.js",
-    "milestone": "August 22nd 2018",
-    "img": "https://avatars1.githubusercontent.com/u/611109?v=4",
-    "handle": "framp",
-    "name": "Federico Rampazzo"
+    "apiSpeakerUrl": "https://api.github.com/users/msmichellegar",
+    "speakerUrl": "https://github.com/msmichellegar",
+    "title": "A Journey with GraphQL in Production",
+    "milestone": "26th September 2018",
+    "img": "https://avatars1.githubusercontent.com/u/10683087?v=4",
+    "handle": "msmichellegar",
+    "name": "Michelle and Faduma"
   }
 ];
 
 const thisMonth = {
-  title: "#76 - August 2018"
+  title: "#77 - September 2018"
 };
 
 const nextMonth = {
-  date: "26th Sept 2018",
+  date: "25th October 2018",
   speakers: [
     {
       name: "TBD",

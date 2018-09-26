@@ -34,12 +34,14 @@ const { PropTypes } = React;
 
 const images = {
   logo: require("../assets/lnug-logo.svg"),
-  nearFormLogo: require("../assets/nearform.jpg"),
+  nearFormLogo: require("../assets/nearform-new.png"),
   nearFormHiring: require("../assets/nearform_hiring.jpg"),
   pusherLogo: require("../assets/pusher_logo_white.png"),
   pizza: require("../assets/pizza-1.gif"),
   cheers: require("../assets/cheers.gif"),
-  condeNastLogo: require("../assets/conde_nast_logo.jpg")
+  condeNastLogo: require("../assets/conde_nast_logo.jpg"),
+  halfStackPoster: require("../assets/halfstack-2018.png"),
+  nodeconfPoster: require("../assets/nodeconf-2018.png")
 };
 
 preloader(images);
@@ -54,56 +56,53 @@ const theme = createTheme({
 });
 
 const emcee = {
-  name: "Marco",
-  twitter: "bettiolo"
+  name: "Adam",
+  twitter: "admataz"
 };
 
 
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
   {
-    "apiSpeakerUrl": "https://api.github.com/users/sevki",
-    "speakerUrl": "https://github.com/sevki",
-    "title": "GraphQL on the Edge",
-    "milestone": "August 22nd 2018",
-    "img": "https://avatars3.githubusercontent.com/u/429977?v=4",
-    "handle": "Sevki",
-    "name": "Sevki"
+      "apiSpeakerUrl": "https://api.github.com/users/SomeHats",
+      "speakerUrl": "https://github.com/SomeHats",
+      "title": "Intro to GraphQL",
+      "description": "<p>GraphQL is kind of a buzzword right now - but what even is this new API tech from Facebook? In this talk, we&rsquo;ll take a look at GraphQL and understand what it is, why you might use it, and how it fits in with the existing API landscape. We&rsquo;ll have a go at writing some simple GraphQL queries together, and hopefully you&rsquo;ll go away excited about using this awesome tech in your own work &amp; projects.</p>\n<p>Alex (<a href=\"https://twitter.com/somehats\">@somehats</a>) is a freelance full-stack designer, developer, and educator. When she&rsquo;s not creating apps, games, and tools for the web, she&rsquo;s teaching other people how to. Alex has been using GraphQL in production on a number of projects since early 2016, and is super excited about introducing more people to the tech. You can follow her on Twitter at <a href=\"https://twitter.com/somehats\">@somehats</a></p>\n",
+      "milestone": "September 26th 2018",
+      "img": "https://avatars2.githubusercontent.com/u/1489520?v=4&s=40",
+      "handle": "SomeHats",
+      "name": "alex"
   },
   {
-    "apiSpeakerUrl": "https://api.github.com/users/davidmarkclements",
-    "speakerUrl": "https://github.com/davidmarkclements",
-    "title": "A New Way to Profile Node.js",
-    "milestone": "August 22nd 2018",
-    "img": "https://avatars1.githubusercontent.com/u/1190716?v=4",
-    "handle": "davidmarkclements",
-    "name": "David Mark Clements"
-  },
-  {
-    "apiSpeakerUrl": "https://api.github.com/users/framp",
-    "speakerUrl": "https://github.com/framp",
-    "title": "Zero Knowledge Proofs in Node.js",
-    "milestone": "August 22nd 2018",
-    "img": "https://avatars1.githubusercontent.com/u/611109?v=4",
-    "handle": "framp",
-    "name": "Federico Rampazzo"
+      "apiSpeakerUrl": "https://api.github.com/users/msmichellegar",
+      "speakerUrl": "https://github.com/msmichellegar",
+      "title": "A Journey with GraphQL in Production",
+      "description": "<p>You&#39;ve heard of GraphQL. But what kind of problems can it solve? This is the story of why we chose GraphQL to power the Vogue and GQ websites, and how it helped us get the data we needed for our frontend. You&#39;ll learn about some ways in which GraphQL can improve your application, and understand how you might implement it.</p>\n<p><strong>About the Speakers</strong></p>\n<p><a href=\"https://twitter.com/FadumaFaralacag\">Faduma</a> and <a href=\"https://twitter.com/msmichellegar\">Michelle</a> are Software Engineers at Cond&eacute; Nast International.</p>\n",
+      "milestone": "September 26th 2018",
+      "img": "https://avatars2.githubusercontent.com/u/10683087?v=4&s=40",
+      "handle": "msmichellegar",
+      "name": "Michelle"
   }
 ];
 
 const thisMonth = {
-  title: "#76 - August 2018"
+  title: "#77 - September 2018"
 };
 
 const nextMonth = {
-  date: "26th Sept 2018",
+  date: "24th October 2018",
   speakers: [
     {
-      name: "TBD",
-      title: "-"
+      name: "Bethany Nicolle Griggs",
+      title: " Building and deploying Cloud Native Node.js applications"
     },
     {
-      name: "-",
-      title: "TBD"
+      name: "Andrea Muttoni",
+      title: "Building an Alexa Skill in 20 minutes using NodeJS"
+    },
+    {
+      name: "Daniel Lee",
+      title: "Dockerizing JavaScript Applications"
     }
 
   ]
@@ -215,23 +214,33 @@ export default class Presentation extends React.Component {
           <Heading size={4} textColor="secondary"><Link href="http://gitter.im/lnug/discuss" target="_blank"><Code textColor="secondary">gitter.im/lnug/discuss</Code></Link></Heading>
         </Slide>
 
+        <Slide id={"jobs"}>
+          <Heading size={3} textColor="secondary">jobs talk!</Heading>
+          <Heading size={4} textColor="secondary"><Link href="https://gitter.im/lnug/london-node-jobs" target="_blank"><Code textColor="secondary">gitter.im/lnug/london-node-jobs</Code></Link></Heading>
+        </Slide>
+
         <Slide id={"venue"}>
           <Heading size={3} textColor="secondary">Venue</Heading>
-          <Image src={images.condeNastLogo.replace("/", "")} margin="0px auto 40px" width="800px" />
+          <Image src={images.condeNastLogo.replace("/", "")} margin="0px auto 40px" width="800px" bgColor="#fff" padding="10px" />
         </Slide>
 
-        <Slide id={"food-and-drink"}>
+        <Slide id={"food-and-drink"} style="background: #fff">
           <Heading size={3} textColor="secondary">Food and drink</Heading>
-          <Image src={images.nearFormLogo.replace("/", "")} margin="0px auto 40px" height="293px" />
-        </Slide>
-
-        <Slide id={"nearform-promo"}>
-        <Fit><Image src={images.nearFormHiring.replace("/", "")} width="1000px" /></Fit>
+            <Image src={images.nearFormLogo.replace("/", "")} margin="0px auto 40px" height="293px"  bgColor="#fff" padding="10px" />
+            <Heading size={5} textColor="secondary">Hiring: nearform.com/careers/apply</Heading>
         </Slide>
 
         <Slide id={"video-production"}>
           <Heading size={3} textColor="secondary">Video</Heading>
           <Image src={images.pusherLogo.replace("/", "")} margin="0px auto 40px" height="293px" />
+        </Slide>
+
+        <Slide id={"halfstack-promo"}>
+        <Fit><Image src={images.halfStackPoster.replace("/", "")} width="1000px" /></Fit>
+        </Slide>
+
+        <Slide id={"nodeconf-promo"}>
+        <Fit><Image src={images.nodeconfPoster.replace("/", "")} width="1000px" /></Fit>
         </Slide>
 
         <SummarySlide id="ready"/>
@@ -268,10 +277,10 @@ export default class Presentation extends React.Component {
 
 
         <Slide id={"nex-time"}>
-          <Image src={images.logo} margin="0px auto 0px" height="200px" />
-          <Heading size={3} textColor="highlight" margin={40}>Next Time</Heading>
-          <Heading size={4} textColor="secondary">{nextMonth.date}</Heading>
-          <List margin="20px 10%">
+          <Image src={images.logo} margin="0px auto 0px" height="140px" />
+          <Heading size={4} textColor="highlight" margin={40}>Next Time</Heading>
+          <Heading size={5} textColor="secondary">{nextMonth.date}</Heading>
+          <List margin="20px 5%">
             {nextMonth.speakers.map((speaker) =>
               <ListItem key={speaker.title} textColor="secondary" textSize={30} margin="20px 0">
                 {speaker.name} <S type="italics"> - {speaker.title}</S>
@@ -296,9 +305,9 @@ export default class Presentation extends React.Component {
 
           <br />and thanks again...<br />
 
-          <Image src={images.condeNastLogo.replace("/", "")} margin="10px" height="63px" />
-          <Image src={images.nearFormLogo.replace("/", "")} margin="10px" height="63px" />
+          <Image src={images.condeNastLogo.replace("/", "")} margin="10px" height="63px" bgColor="#fff" padding="5px" />
           <Image src={images.pusherLogo.replace("/", "")} margin="10px" height="63px" />
+          <Image src={images.nearFormLogo.replace("/", "")} margin="10px" height="63px" bgColor="#fff" padding="5px" />
 
         </Slide>
 

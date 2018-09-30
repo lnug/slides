@@ -64,6 +64,7 @@ const emcee = {
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
   {
+
       "apiSpeakerUrl": "https://api.github.com/users/SomeHats",
       "speakerUrl": "https://github.com/SomeHats",
       "title": "Intro to GraphQL",
@@ -82,6 +83,7 @@ const speakers = [
       "img": "https://avatars2.githubusercontent.com/u/10683087?v=4&s=40",
       "handle": "msmichellegar",
       "name": "Michelle and Faduma"
+
   }
 ];
 
@@ -91,6 +93,7 @@ const thisMonth = {
 
 const nextMonth = {
   date: "24th October 2018",
+
   speakers: [
     {
       name: "Bethany Nicolle Griggs",

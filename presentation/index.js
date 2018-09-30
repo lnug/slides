@@ -71,7 +71,7 @@ const speakers = [
       "milestone": "September 26th 2018",
       "img": "https://avatars2.githubusercontent.com/u/1489520?v=4&s=40",
       "handle": "SomeHats",
-      "name": "alex"
+      "name": "Alex Dytrych"
   },
   {
       "apiSpeakerUrl": "https://api.github.com/users/msmichellegar",
@@ -81,7 +81,7 @@ const speakers = [
       "milestone": "September 26th 2018",
       "img": "https://avatars2.githubusercontent.com/u/10683087?v=4&s=40",
       "handle": "msmichellegar",
-      "name": "Michelle"
+      "name": "Michelle and Faduma"
   }
 ];
 

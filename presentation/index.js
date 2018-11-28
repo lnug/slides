@@ -64,48 +64,46 @@ const emcee = {
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
   {
-
-      "apiSpeakerUrl": "https://api.github.com/users/SomeHats",
-      "speakerUrl": "https://github.com/SomeHats",
-      "title": "Intro to GraphQL",
-      "description": "<p>GraphQL is kind of a buzzword right now - but what even is this new API tech from Facebook? In this talk, we&rsquo;ll take a look at GraphQL and understand what it is, why you might use it, and how it fits in with the existing API landscape. We&rsquo;ll have a go at writing some simple GraphQL queries together, and hopefully you&rsquo;ll go away excited about using this awesome tech in your own work &amp; projects.</p>\n<p>Alex (<a href=\"https://twitter.com/somehats\">@somehats</a>) is a freelance full-stack designer, developer, and educator. When she&rsquo;s not creating apps, games, and tools for the web, she&rsquo;s teaching other people how to. Alex has been using GraphQL in production on a number of projects since early 2016, and is super excited about introducing more people to the tech. You can follow her on Twitter at <a href=\"https://twitter.com/somehats\">@somehats</a></p>\n",
-      "milestone": "September 26th 2018",
-      "img": "https://avatars2.githubusercontent.com/u/1489520?v=4&s=40",
-      "handle": "SomeHats",
-      "name": "Alex Dytrych"
-  },
-  {
-      "apiSpeakerUrl": "https://api.github.com/users/msmichellegar",
-      "speakerUrl": "https://github.com/msmichellegar",
-      "title": "A Journey with GraphQL in Production",
-      "description": "<p>You&#39;ve heard of GraphQL. But what kind of problems can it solve? This is the story of why we chose GraphQL to power the Vogue and GQ websites, and how it helped us get the data we needed for our frontend. You&#39;ll learn about some ways in which GraphQL can improve your application, and understand how you might implement it.</p>\n<p><strong>About the Speakers</strong></p>\n<p><a href=\"https://twitter.com/FadumaFaralacag\">Faduma</a> and <a href=\"https://twitter.com/msmichellegar\">Michelle</a> are Software Engineers at Cond&eacute; Nast International.</p>\n",
-      "milestone": "September 26th 2018",
-      "img": "https://avatars2.githubusercontent.com/u/10683087?v=4&s=40",
-      "handle": "msmichellegar",
-      "name": "Michelle and Faduma"
-
-  }
+    "apiSpeakerUrl": "https://api.github.com/users/BethGriggs",
+    "speakerUrl": "https://github.com/BethGriggs",
+    "title": "Building and deploying Cloud Native Node.js applications",
+    "img": "https://avatars2.githubusercontent.com/u/8297234?v=4&s=40",
+    "handle": "BethGriggs",
+    "name": "Bethany Nicolle Griggs"
+},
+{
+    "apiSpeakerUrl": "https://api.github.com/users/muttoni",
+    "speakerUrl": "https://github.com/muttoni",
+    "title": "Building an Alexa Skill in 20 minutes using NodeJS",
+    "img": "https://avatars2.githubusercontent.com/u/27052451?v=4&s=40",
+    "handle": "muttoni",
+    "name": "Andrea Muttoni"
+},
+{
+    "apiSpeakerUrl": "https://api.github.com/users/d4nyll",
+    "speakerUrl": "https://github.com/d4nyll",
+    "title": "Dockerizing JavaScript Applications",
+    "img": "https://avatars2.githubusercontent.com/u/9997953?v=4&s=40",
+    "handle": "d4nyll",
+    "name": "Daniel Li"
+}
 ];
 
 const thisMonth = {
-  title: "#77 - September 2018"
+  title: "#78 - October 2018"
 };
 
 const nextMonth = {
-  date: "24th October 2018",
+  date: "28th November 2018",
 
   speakers: [
     {
-      name: "Bethany Nicolle Griggs",
-      title: " Building and deploying Cloud Native Node.js applications"
+      name: "Edd Yerburgh",
+      title: "Large-scale refactoring with codemods"
     },
     {
-      name: "Andrea Muttoni",
-      title: "Building an Alexa Skill in 20 minutes using NodeJS"
-    },
-    {
-      name: "Daniel Lee",
-      title: "Dockerizing JavaScript Applications"
+      name: "?",
+      title: "??? using NodeJS"
     }
 
   ]
@@ -317,9 +315,9 @@ export default class Presentation extends React.Component {
 
         <Slide>
           <Heading size={3} textColor="secondary" margin={30}>After Party</Heading>
-          <Heading size={5} textColor="secondary">Nell Gwynne Tavern</Heading>
+          <Heading size={5} textColor="secondary">Theodore Bullfrog</Heading>
           <Text textColor="secondary" margin={10}>
-           2 Bull Inn Ct, London WC2R 0NP
+          26-30 John Adam St, London WC2N 6HL
           </Text>
           <Image src={images.cheers.replace("/", "")} margin="40px auto 0px" height="200px" />
           <Heading size={5} textColor="highlight" >Before you go...</Heading>

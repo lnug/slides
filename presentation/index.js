@@ -64,48 +64,42 @@ const emcee = {
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
   {
-
-      "apiSpeakerUrl": "https://api.github.com/users/SomeHats",
-      "speakerUrl": "https://github.com/SomeHats",
-      "title": "Intro to GraphQL",
-      "description": "<p>GraphQL is kind of a buzzword right now - but what even is this new API tech from Facebook? In this talk, we&rsquo;ll take a look at GraphQL and understand what it is, why you might use it, and how it fits in with the existing API landscape. We&rsquo;ll have a go at writing some simple GraphQL queries together, and hopefully you&rsquo;ll go away excited about using this awesome tech in your own work &amp; projects.</p>\n<p>Alex (<a href=\"https://twitter.com/somehats\">@somehats</a>) is a freelance full-stack designer, developer, and educator. When she&rsquo;s not creating apps, games, and tools for the web, she&rsquo;s teaching other people how to. Alex has been using GraphQL in production on a number of projects since early 2016, and is super excited about introducing more people to the tech. You can follow her on Twitter at <a href=\"https://twitter.com/somehats\">@somehats</a></p>\n",
-      "milestone": "September 26th 2018",
-      "img": "https://avatars2.githubusercontent.com/u/1489520?v=4&s=40",
-      "handle": "SomeHats",
-      "name": "Alex Dytrych"
+      "apiSpeakerUrl": "https://api.github.com/users/trevorah",
+      "speakerUrl": "https://github.com/trevorah",
+      "title": "ECMAScript Modules: They're Coming...",
+      "description": "<p>ECMAScript modules are just around the corner, but they may not be what you expect. I&#39;ll go into the reasoning behind the change and what it means for the future of javascript.</p>\n<p>I&#39;m Andy, a full stack JS developer with a love of native apps. I&#39;m a contractor @ DAZN and my twitter handle is <code>@trevorah_</code>.</p>\n",
+      "milestone": "November 28th 2018",
+      "img": "https://avatars0.githubusercontent.com/u/298742?v=4&s=40",
+      "handle": "trevorah",
+      "name": "Andy Trevorah"
   },
   {
-      "apiSpeakerUrl": "https://api.github.com/users/msmichellegar",
-      "speakerUrl": "https://github.com/msmichellegar",
-      "title": "A Journey with GraphQL in Production",
-      "description": "<p>You&#39;ve heard of GraphQL. But what kind of problems can it solve? This is the story of why we chose GraphQL to power the Vogue and GQ websites, and how it helped us get the data we needed for our frontend. You&#39;ll learn about some ways in which GraphQL can improve your application, and understand how you might implement it.</p>\n<p><strong>About the Speakers</strong></p>\n<p><a href=\"https://twitter.com/FadumaFaralacag\">Faduma</a> and <a href=\"https://twitter.com/msmichellegar\">Michelle</a> are Software Engineers at Cond&eacute; Nast International.</p>\n",
-      "milestone": "September 26th 2018",
-      "img": "https://avatars2.githubusercontent.com/u/10683087?v=4&s=40",
-      "handle": "msmichellegar",
-      "name": "Michelle and Faduma"
-
+      "apiSpeakerUrl": "https://api.github.com/users/eddyerburgh",
+      "speakerUrl": "https://github.com/eddyerburgh",
+      "title": "Large-scale refactoring with codemods",
+      "description": "<p>Refactoring is part of the process of maintaining an application, but large scale refactoring that are more complicated than a find and replace are time consuming. </p>\n<p>Codemods are a tool to refactor code by manipulating the abstract syntax tree (AST). In this talk I&#39;ll teach you what ASTs are, why we use ASTs in tools like Babel and eslint, and how to write a codemod that manipulates an AST.</p>\n<p><strong>About me</strong>&#10;I&#39;m a Vue core contributor, and software engineer at the BBC. <a href=\"https://twitter.com/EddYerburgh\">https://twitter.com/EddYerburgh</a></p>\n",
+      "milestone": "November 28th 2018",
+      "img": "https://avatars3.githubusercontent.com/u/13196123?v=4&s=40",
+      "handle": "eddyerburgh",
+      "name": "Edd Yerburgh"
   }
 ];
 
 const thisMonth = {
-  title: "#77 - September 2018"
+  title: "#79 - November 2018"
 };
 
 const nextMonth = {
-  date: "24th October 2018",
+  date: "23rd January 2018",
 
   speakers: [
     {
-      name: "Bethany Nicolle Griggs",
-      title: " Building and deploying Cloud Native Node.js applications"
+      name: "Errietta Kostala",
+      title: "Build APIs with node, Lambda & Serverless"
     },
     {
-      name: "Andrea Muttoni",
-      title: "Building an Alexa Skill in 20 minutes using NodeJS"
-    },
-    {
-      name: "Daniel Lee",
-      title: "Dockerizing JavaScript Applications"
+      name: "Shane Osbourne",
+      title: "Rust for Javascript devs - your first Web Assembly App"
     }
 
   ]
@@ -238,12 +232,14 @@ export default class Presentation extends React.Component {
           <Image src={images.pusherLogo.replace("/", "")} margin="0px auto 40px" height="293px" />
         </Slide>
 
-        <Slide id={"halfstack-promo"}>
-        <Fit><Image src={images.halfStackPoster.replace("/", "")} width="1000px" /></Fit>
+        <Slide id={"cityJS-promo"}>
+        <Heading size={3} textColor="secondary" >CityJs Conf</Heading>
+        <Text textColor="secondary" italic margin={20}>cityjsconf.org</Text>
         </Slide>
 
-        <Slide id={"nodeconf-promo"}>
-        <Fit><Image src={images.nodeconfPoster.replace("/", "")} width="1000px" /></Fit>
+        <Slide id={"codefirstgirls-promo"}>
+        <Heading size={3} textColor="secondary" >Code First Girls</Heading>
+        <Text textColor="secondary" italic margin={20}>codefirstgirls.org.uk/become-an-instructor.html</Text>
         </Slide>
 
         <SummarySlide id="ready"/>
@@ -317,9 +313,9 @@ export default class Presentation extends React.Component {
 
         <Slide>
           <Heading size={3} textColor="secondary" margin={30}>After Party</Heading>
-          <Heading size={5} textColor="secondary">Nell Gwynne Tavern</Heading>
+          <Heading size={5} textColor="secondary">Theodore Bullfrog</Heading>
           <Text textColor="secondary" margin={10}>
-           2 Bull Inn Ct, London WC2R 0NP
+          26-30 John Adam St, London WC2N 6HL
           </Text>
           <Image src={images.cheers.replace("/", "")} margin="40px auto 0px" height="200px" />
           <Heading size={5} textColor="highlight" >Before you go...</Heading>

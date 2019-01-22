@@ -64,46 +64,42 @@ const emcee = {
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
   {
-    "apiSpeakerUrl": "https://api.github.com/users/BethGriggs",
-    "speakerUrl": "https://github.com/BethGriggs",
-    "title": "Building and deploying Cloud Native Node.js applications",
-    "img": "https://avatars2.githubusercontent.com/u/8297234?v=4&s=40",
-    "handle": "BethGriggs",
-    "name": "Bethany Nicolle Griggs"
-},
-{
-    "apiSpeakerUrl": "https://api.github.com/users/muttoni",
-    "speakerUrl": "https://github.com/muttoni",
-    "title": "Building an Alexa Skill in 20 minutes using NodeJS",
-    "img": "https://avatars2.githubusercontent.com/u/27052451?v=4&s=40",
-    "handle": "muttoni",
-    "name": "Andrea Muttoni"
-},
-{
-    "apiSpeakerUrl": "https://api.github.com/users/d4nyll",
-    "speakerUrl": "https://github.com/d4nyll",
-    "title": "Dockerizing JavaScript Applications",
-    "img": "https://avatars2.githubusercontent.com/u/9997953?v=4&s=40",
-    "handle": "d4nyll",
-    "name": "Daniel Li"
-}
+      "apiSpeakerUrl": "https://api.github.com/users/trevorah",
+      "speakerUrl": "https://github.com/trevorah",
+      "title": "ECMAScript Modules: They're Coming...",
+      "description": "<p>ECMAScript modules are just around the corner, but they may not be what you expect. I&#39;ll go into the reasoning behind the change and what it means for the future of javascript.</p>\n<p>I&#39;m Andy, a full stack JS developer with a love of native apps. I&#39;m a contractor @ DAZN and my twitter handle is <code>@trevorah_</code>.</p>\n",
+      "milestone": "November 28th 2018",
+      "img": "https://avatars0.githubusercontent.com/u/298742?v=4&s=40",
+      "handle": "trevorah",
+      "name": "Andy Trevorah"
+  },
+  {
+      "apiSpeakerUrl": "https://api.github.com/users/eddyerburgh",
+      "speakerUrl": "https://github.com/eddyerburgh",
+      "title": "Large-scale refactoring with codemods",
+      "description": "<p>Refactoring is part of the process of maintaining an application, but large scale refactoring that are more complicated than a find and replace are time consuming. </p>\n<p>Codemods are a tool to refactor code by manipulating the abstract syntax tree (AST). In this talk I&#39;ll teach you what ASTs are, why we use ASTs in tools like Babel and eslint, and how to write a codemod that manipulates an AST.</p>\n<p><strong>About me</strong>&#10;I&#39;m a Vue core contributor, and software engineer at the BBC. <a href=\"https://twitter.com/EddYerburgh\">https://twitter.com/EddYerburgh</a></p>\n",
+      "milestone": "November 28th 2018",
+      "img": "https://avatars3.githubusercontent.com/u/13196123?v=4&s=40",
+      "handle": "eddyerburgh",
+      "name": "Edd Yerburgh"
+  }
 ];
 
 const thisMonth = {
-  title: "#78 - October 2018"
+  title: "#79 - November 2018"
 };
 
 const nextMonth = {
-  date: "28th November 2018",
+  date: "23rd January 2018",
 
   speakers: [
     {
-      name: "Edd Yerburgh",
-      title: "Large-scale refactoring with codemods"
+      name: "Errietta Kostala",
+      title: "Build APIs with node, Lambda & Serverless"
     },
     {
-      name: "?",
-      title: "??? using NodeJS"
+      name: "Shane Osbourne",
+      title: "Rust for Javascript devs - your first Web Assembly App"
     }
 
   ]
@@ -236,12 +232,14 @@ export default class Presentation extends React.Component {
           <Image src={images.pusherLogo.replace("/", "")} margin="0px auto 40px" height="293px" />
         </Slide>
 
-        <Slide id={"halfstack-promo"}>
-        <Fit><Image src={images.halfStackPoster.replace("/", "")} width="1000px" /></Fit>
+        <Slide id={"cityJS-promo"}>
+        <Heading size={3} textColor="secondary" >CityJs Conf</Heading>
+        <Text textColor="secondary" italic margin={20}>cityjsconf.org</Text>
         </Slide>
 
-        <Slide id={"nodeconf-promo"}>
-        <Fit><Image src={images.nodeconfPoster.replace("/", "")} width="1000px" /></Fit>
+        <Slide id={"codefirstgirls-promo"}>
+        <Heading size={3} textColor="secondary" >Code First Girls</Heading>
+        <Text textColor="secondary" italic margin={20}>codefirstgirls.org.uk/become-an-instructor.html</Text>
         </Slide>
 
         <SummarySlide id="ready"/>

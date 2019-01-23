@@ -4,47 +4,27 @@ import React from "react";
 // Import Spectacle Core tags
 import {
   Appear,
+  BlockQuote,
+  Code,
   Deck,
   Heading,
-  ListItem,
-  Fill,
   Fit,
-  List,
-  Slide,
-  Text,
+  Fill,
   Image,
   Link,
-  Code,
-  BlockQuote,
+  List,
+  ListItem,
   Quote,
-  S
+  Slide,
+  S,
+  Text
 } from "spectacle";
-
-// Import image preloader util
-import preloader from "spectacle/lib/utils/preloader";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
 // Require CSS
 require("normalize.css");
-require("spectacle/lib/themes/default/index.css");
-
-const { PropTypes } = React;
-
-const images = {
-  logo: require("../assets/lnug-logo.svg"),
-  nearFormLogo: require("../assets/nearform-new.png"),
-  nearFormHiring: require("../assets/nearform_hiring.jpg"),
-  pusherLogo: require("../assets/pusher_logo_white.png"),
-  pizza: require("../assets/pizza-1.gif"),
-  cheers: require("../assets/cheers.gif"),
-  condeNastLogo: require("../assets/conde_nast_logo.jpg"),
-  halfStackPoster: require("../assets/halfstack-2018.png"),
-  nodeconfPoster: require("../assets/nodeconf-2018.png")
-};
-
-preloader(images);
 
 const theme = createTheme({
   primary: "rgb(70, 72, 61)",
@@ -55,6 +35,21 @@ const theme = createTheme({
   secondary: "Helvetica"
 });
 
+// =============== reusable content for slides...
+
+const images = {
+  lnugLogo: require("../assets/lnug-logo.svg"),
+  nearFormLogo: require("../assets/logos/NF__Primary_Logo_Reversed_Horizontal.svg"),
+  condeNastLogo: require("../assets/logos/Conde_Nast_logo.svg"),
+  nexmoLogo: require("../assets/logos/nexmo-logo.svg"),
+  cityJsLogo: require("../assets/logos/cityJSConf.jpg"),
+  nexmoslide: require("../assets/announcements/Nexmo_LNUG.001.png"),
+  spaceStartupslide: require("../assets/announcements/SWOnePager.png"),
+  ijsLogo: require("../assets/logos/iJS-logo_desktop@2x.png"),
+  pizza: require("../assets/pizza-1.gif"),
+  cheers: require("../assets/cheers.gif")
+};
+
 const emcee = {
   name: "Adam",
   twitter: "admataz"
@@ -64,100 +59,95 @@ const emcee = {
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
   {
-      "apiSpeakerUrl": "https://api.github.com/users/trevorah",
-      "speakerUrl": "https://github.com/trevorah",
-      "title": "ECMAScript Modules: They're Coming...",
-      "description": "<p>ECMAScript modules are just around the corner, but they may not be what you expect. I&#39;ll go into the reasoning behind the change and what it means for the future of javascript.</p>\n<p>I&#39;m Andy, a full stack JS developer with a love of native apps. I&#39;m a contractor @ DAZN and my twitter handle is <code>@trevorah_</code>.</p>\n",
-      "milestone": "November 28th 2018",
-      "img": "https://avatars0.githubusercontent.com/u/298742?v=4&s=40",
-      "handle": "trevorah",
-      "name": "Andy Trevorah"
+    apiSpeakerUrl: "https://api.github.com/users/shakyShane",
+    speakerUrl: "https://github.com/shakyShane",
+    title: "Web Assembly and the future of the Web",
+    description: "<p>Over the years we&#39;ve seen many attempts by developers to avoid writing Javascript&#10;at all costs - creating new languages that compile <em>into</em> JavaScript is still a common practice&#10;in many language communities.</p>\n<p>But things are changing, for the better. We&#39;re reaching an age where potentially&#10;any high-level language will one day be able run in a browser, with greater speed&#10;and safety - all thanks to Web Assembly.</p>\n<p>This talk will provide practical information about how you can take code written&#10;in a shiny new language like Rust, compile it to a Web Assembly module and then&#10;execute it in the browser.</p>\n",
+    milestone: "January 23rd 2019",
+    img: "https://avatars3.githubusercontent.com/u/1643522?v=4&s=40",
+    handle: "shakyShane",
+    name: "Shane Osbourne"
   },
   {
-      "apiSpeakerUrl": "https://api.github.com/users/eddyerburgh",
-      "speakerUrl": "https://github.com/eddyerburgh",
-      "title": "Large-scale refactoring with codemods",
-      "description": "<p>Refactoring is part of the process of maintaining an application, but large scale refactoring that are more complicated than a find and replace are time consuming. </p>\n<p>Codemods are a tool to refactor code by manipulating the abstract syntax tree (AST). In this talk I&#39;ll teach you what ASTs are, why we use ASTs in tools like Babel and eslint, and how to write a codemod that manipulates an AST.</p>\n<p><strong>About me</strong>&#10;I&#39;m a Vue core contributor, and software engineer at the BBC. <a href=\"https://twitter.com/EddYerburgh\">https://twitter.com/EddYerburgh</a></p>\n",
-      "milestone": "November 28th 2018",
-      "img": "https://avatars3.githubusercontent.com/u/13196123?v=4&s=40",
-      "handle": "eddyerburgh",
-      "name": "Edd Yerburgh"
+    apiSpeakerUrl: "https://api.github.com/users/errietta",
+    speakerUrl: "https://github.com/errietta",
+    title: "Build APIs with node, Lambda & Serverless",
+    description: "<p>AWS lambda allows you to build microservices that can be triggered both through HTTP and other ways such  as when something is added to a queue, or on a schedule. We&#39;ll show how it is possible to build an API which consists of small, individual functions that respond to different HTTP requests using AWS lambda and API gateway. In addition to this, we will be deploying using serverless within minutes!</p>\n<h2 id=\"about-me\">About me</h2>\n<p>Polyglot developer with a passion for learning new things.</p>\n",
+    milestone: "January 23rd 2019",
+    img: "https://avatars0.githubusercontent.com/u/134585?v=4&s=40",
+    handle: "errietta",
+    name: "Errietta Kostala"
   }
-];
+]
+;
 
 const thisMonth = {
-  title: "#79 - November 2018"
+  title: "#80 - January 2019"
 };
 
 const nextMonth = {
-  date: "23rd January 2018",
+  date: "27th February 2019",
 
   speakers: [
     {
-      name: "Errietta Kostala",
-      title: "Build APIs with node, Lambda & Serverless"
+      name: "Marco Talento",
+      url: "https://github.com/Talento90",
+      title: "TypeScript: It's time to migrate!"
     },
     {
-      name: "Shane Osbourne",
-      title: "Rust for Javascript devs - your first Web Assembly App"
+      name: "Rene Pot",
+      url: "https://github.com/Topener",
+      title: "Building Cross Platform apps with Titanium"
+    },
+    {
+      name: "Jamie McCrindle",
+      url: "https://github.com/jamiemccrindle",
+      title: "Async Iterators"
     }
-
   ]
 };
 
 
-class SpeakerSlide extends React.Component {
-  static propTypes = {
-    speaker: PropTypes.object
-  };
+// ================== rusable components
 
-  render() {
-    const { speaker } = this.props;
-    if (!speaker) {
-      return null;
-    }
 
-    return (
-      <Slide id={speaker.name.replace(" ", "-")}>
-        <Heading size={5} textColor="highlight" margin={50}>Next Up</Heading>
-        <Heading size={4} textColor="secondary">{speaker.name}</Heading>
-        <Heading size={6} textColor="secondary"><S type="italics">{speaker.title}</S></Heading>
-      </Slide>
-    );
+const SpeakerSlide = ({ speaker }) => {
+  if (!speaker) {
+    return null;
   }
-}
+
+  return (
+    <Slide id={speaker.name.replace(" ", "-")}>
+      <Heading size={5} textColor="highlight" margin={50}>Next Up</Heading>
+      <Heading size={4} textColor="secondary">{speaker.name}</Heading>
+      <Heading size={6} textColor="secondary"><S type="italics">{speaker.title}</S></Heading>
+    </Slide>
+  );
+};
 
 
-class SummarySlide extends React.Component {
-  static propTypes = {
-    id: PropTypes.string
-  };
+const SummarySlide = ({ id }) => (<Slide align={"center center"} id={id}>
+  <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
+  <Heading size={6} textColor="highlight">{thisMonth.title}</Heading>
+  {speakers.map((speaker) =>
+    (<Fit key={speaker.title} textColor="secondary" textSize={38} margin="20px 0">
+      {speaker.name} <S type="italics" textSize={24}> <br />{speaker.title} </S>
+      <Text textColor="secondary" textSize={20}>
+        {speaker.twitter
+              && <span>Twitter: @{speaker.twitter} </span>
+        }
 
-  static defaultProps = {
-    id: "null"
-  };
-  render() {
-    const { id = "" } = this.props;
-    return (<Slide align={"center center"} id={id}>
-      <Image src={images.logo} margin="0px auto 0px" height="200px" />
-      <Heading size={6} textColor="highlight">{thisMonth.title}</Heading>
-      {speakers.map((speaker) =>
-        <Fit key={speaker.title} textColor="secondary" textSize={38} margin="20px 0">
-          {speaker.name} <S type="italics" textSize={24}> <br />{speaker.title} </S>
-          <Text textColor="secondary" textSize={20}>
-            {speaker.twitter &&
-              <span>Twitter: @{speaker.twitter} </span>
-            }
+        {speaker.github
+              && <span>Github: @{speaker.github}</span>
+        }
+      </Text>
+    </Fit>)
+  )}
+</Slide>);
 
-            {speaker.github &&
-              <span>Github: @{speaker.github}</span>
-            }
-          </Text>
-        </Fit>
-      )}
-    </Slide>);
-  }
-}
+
+// ====================
+
 
 export default class Presentation extends React.Component {
   render() {
@@ -199,7 +189,8 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide id={"hashtags"}>
-          <Heading size={3} textColor="secondary">Tweet <Text textColor="highlight">@lnugorg</Text></Heading>
+          <Heading size={5} textColor="secondary">Tweet</Heading>
+          <Heading size={2} textColor="highlight">@lnugORG</Heading>
           <Heading size={4} textColor="secondary"><Code textColor="secondary">#LNUG #node #javascript #london</Code></Heading>
           <Appear>
             <Heading size={6} textColor="secondary" margin="20px 0" textSize="20px" textColor="highlight">tweet me too @{emcee.twitter}</Heading>
@@ -207,112 +198,133 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide id={"gitter"}>
-          <Heading size={3} textColor="secondary">discuss!</Heading>
+          <Heading size={3} textColor="highlight">discuss!</Heading>
           <Heading size={4} textColor="secondary"><Link href="http://gitter.im/lnug/discuss" target="_blank"><Code textColor="secondary">gitter.im/lnug/discuss</Code></Link></Heading>
         </Slide>
 
         <Slide id={"jobs"}>
-          <Heading size={3} textColor="secondary">jobs talk!</Heading>
+          <Heading size={3} textColor="highlight">jobs!</Heading>
           <Heading size={4} textColor="secondary"><Link href="https://gitter.im/lnug/london-node-jobs" target="_blank"><Code textColor="secondary">gitter.im/lnug/london-node-jobs</Code></Link></Heading>
         </Slide>
 
         <Slide id={"venue"}>
-          <Heading size={3} textColor="secondary">Venue</Heading>
-          <Image src={images.condeNastLogo.replace("/", "")} margin="0px auto 40px" width="800px" bgColor="#fff" padding="10px" />
+          <Heading size={5} textColor="highlight">Venue</Heading>
+          <Image src={images.condeNastLogo} margin="0px auto 40px" width="800px" padding="10px" />
         </Slide>
 
         <Slide id={"food-and-drink"} style="background: #fff">
-          <Heading size={3} textColor="secondary">Food and drink</Heading>
-            <Image src={images.nearFormLogo.replace("/", "")} margin="0px auto 40px" height="293px"  bgColor="#fff" padding="10px" />
-            <Heading size={5} textColor="secondary">Hiring: nearform.com/careers/apply</Heading>
+          <Heading size={5} textColor="highlight">Food and drink</Heading>
+          <Image src={images.nearFormLogo} margin="0px auto 40px" height="293px" padding="10px" />
         </Slide>
 
         <Slide id={"video-production"}>
-          <Heading size={3} textColor="secondary">Video</Heading>
-          <Image src={images.pusherLogo.replace("/", "")} margin="0px auto 40px" height="293px" />
+          <Heading size={5} textColor="highlight">Video</Heading>
+          <Image src={images.nexmoLogo} margin="0px auto 40px" width="800px" />
+        </Slide>
+
+        <Slide id={"nexmo-promo"}>
+          <Image src={images.nexmoslide} margin="0px auto 40px" width="100%" />
         </Slide>
 
         <Slide id={"cityJS-promo"}>
-        <Heading size={3} textColor="secondary" >CityJs Conf</Heading>
-        <Text textColor="secondary" italic margin={20}>cityjsconf.org</Text>
+          <Heading size={5} textColor="highlight">community</Heading>
+          <Heading size={3} textColor="secondary" >CityJsConf 2019</Heading>
+          <Text textColor="secondary" italic margin={20}>cityJSConf.org</Text>
+          <Image src={images.cityJsLogo} margin="0px auto 40px" width="200px" />
         </Slide>
 
-        <Slide id={"codefirstgirls-promo"}>
-        <Heading size={3} textColor="secondary" >Code First Girls</Heading>
-        <Text textColor="secondary" italic margin={20}>codefirstgirls.org.uk/become-an-instructor.html</Text>
+        <Slide id={"space-promo"}>
+          <Image src={images.spaceStartupslide} margin="0px auto 40px" width="100%" />
         </Slide>
+
+
+        <Slide id={"codefirstgirls-promo"}>
+          <Heading size={5} textColor="highlight">community</Heading>
+          <Heading size={3} textColor="secondary" >Code First Girls</Heading>
+          <Text textColor="secondary" italic margin={20}>codefirstgirls.org.uk/become-an-instructor.html</Text>
+        </Slide>
+
+        <Slide id={"ijs-promo"}>
+          <Image src={images.ijsLogo} margin="0px auto 40px" width="400px" />
+          <Text textColor="highlight" > 15 % discount code: ijs-lnug-15</Text>
+          <Text textColor="secondary" italic margin={20}>
+          May 13 – 15, 2019 | London<br />
+          EXPO: May 13 & 14, 2019</Text>
+        </Slide>
+
 
         <SummarySlide id="ready"/>
 
         <SpeakerSlide speaker={speakers[0]} />
 
         <Slide id={"community-announcments"}>
-          <Image src={images.logo} margin="0px auto 0px" height="200px" />
+          <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
           <Heading size={3} textColor="highlight" margin={50}>Community Announcements</Heading>
           <Heading size={5} textColor="secondary">Have something to share?</Heading>
         </Slide>
 
         <Slide id={"submit-a-talk"}>
-        <Image src={images.logo} margin="0px auto 0px" height="200px" />
-        <Heading size={3} textColor="highlight">Submit a talk proposal!</Heading>
-        <Code type="bold" textColor="secondary">github.com/lnug/speakers</Code>
-      </Slide>
+          <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
+          <Heading size={3} textColor="highlight">Submit a talk proposal!</Heading>
+          <Code type="bold" textColor="secondary">github.com/lnug/speakers</Code>
+        </Slide>
 
-        {speakers.length > 1 &&
-          <SpeakerSlide speaker={speakers[1]} />
+        {speakers.length > 1
+          && <SpeakerSlide speaker={speakers[1]} />
         }
 
         <Slide id={"get-involved"}>
-          <Image src={images.logo} margin="0px auto 0px" height="200px" />
-          <Heading size={3} textColor="secondary">Get Involved</Heading>
-          <Heading size="5" textColor="secondary">Feedback<br /><Code type="bold" textColor="secondary">github.com/lnug/feedback</Code></Heading>
-          <Heading size="5" textColor="secondary">Gitter<br /><Code type="bold" textColor="secondary">gitter.com/lnug/discuss</Code></Heading>
+          <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
+          <Heading size={5} textColor="highlight">Get Involved</Heading>
+          <Heading size="6" textColor="secondary">Feedback<br /><Code type="bold" textColor="secondary">github.com/lnug/feedback</Code></Heading>
+          <Heading size="6" textColor="secondary">Gitter<br /><Code type="bold" textColor="secondary">gitter.com/lnug/discuss</Code></Heading>
         </Slide>
 
 
-        {speakers.length > 2 &&
-          <SpeakerSlide speaker={speakers[2]} />
+        {speakers.length > 2
+          && <SpeakerSlide speaker={speakers[2]} />
         }
 
-
         <Slide id={"nex-time"}>
-          <Image src={images.logo} margin="0px auto 0px" height="140px" />
-          <Heading size={4} textColor="highlight" margin={40}>Next Time</Heading>
+          <Image src={images.lnugLogo} margin="0px auto 0px" height="140px" />
+          <Heading size={5} textColor="highlight">Next Time</Heading>
           <Heading size={5} textColor="secondary">{nextMonth.date}</Heading>
           <List margin="20px 5%">
             {nextMonth.speakers.map((speaker) =>
-              <ListItem key={speaker.title} textColor="secondary" textSize={30} margin="20px 0">
+              (<ListItem key={speaker.title} textColor="secondary" textSize={30} margin="20px 0">
                 {speaker.name} <S type="italics"> - {speaker.title}</S>
-              </ListItem>
+              </ListItem>)
             )}
           </List>
 
           <Code textColor="secondary" bold>
             meetup.com/london-nodejs
           </Code>
-          <Text textColor="secondary" italic margin={20}>
+          <Text textColor="highlight" italic margin={20}>
             The 4th Wednesday of the month
           </Text>
         </Slide>
 
 
-        <Slide>
-          <Image src={images.logo} margin="10px" height="153px" />
-          <Heading size={3} textColor="highlight" >Thank You</Heading>
-          <Heading size={5} textColor="secondary">Had a great time? Let us know!</Heading>
-          <Text textColor="secondary">github.com/lnug/feedback</Text>
+        <Slide align={"center center"}>
+          <div align="center">
+            <Image src={images.lnugLogo} margin="10px" height="153px" />
+            <Heading size={3} textColor="highlight" >Thank You</Heading>
+            <Heading size={5} textColor="secondary">Had a great time? Let us know!</Heading>
+            <Text textColor="highlight">github.com/lnug/feedback</Text>
 
-          <br />and thanks again...<br />
+            <br />and thanks again...<br />
 
-          <Image src={images.condeNastLogo.replace("/", "")} margin="10px" height="63px" bgColor="#fff" padding="5px" />
-          <Image src={images.pusherLogo.replace("/", "")} margin="10px" height="63px" />
-          <Image src={images.nearFormLogo.replace("/", "")} margin="10px" height="63px" bgColor="#fff" padding="5px" />
 
+            <Image src={images.condeNastLogo} margin="10" height="60"/>
+            <Image src={images.nexmoLogo} margin="10" height="40"/>
+            <Image src={images.nearFormLogo} margin="10" height="80" />
+          </div>
         </Slide>
 
 
         <Slide>
-          <Heading size={3} textColor="secondary" margin={30}>After Party</Heading>
+          <Heading size={5} textColor="highlight" margin={30}>After Party</Heading>
           <Heading size={5} textColor="secondary">Theodore Bullfrog</Heading>
           <Text textColor="secondary" margin={10}>
           26-30 John Adam St, London WC2N 6HL

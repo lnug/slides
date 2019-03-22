@@ -41,7 +41,7 @@ const images = {
   lnugLogo: require("../assets/lnug-logo.svg"),
   nearFormLogo: require("../assets/logos/NF__Primary_Logo_Reversed_Horizontal.svg"),
   condeNastLogo: require("../assets/logos/Conde_Nast_logo.svg"),
-  nexmoLogo: require("../assets/logos/nexmo-logo.svg"),
+  pusherLogo: require("../assets/logos/pusher_logo_white.png"),
   cityJsLogo: require("../assets/logos/cityJSConf.jpg"),
   nexmoslide: require("../assets/announcements/Nexmo_LNUG.001.png"),
   spaceStartupslide: require("../assets/announcements/SWOnePager.png"),
@@ -59,50 +59,38 @@ const emcee = {
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
   {
-    apiSpeakerUrl: "https://api.github.com/users/shakyShane",
-    speakerUrl: "https://github.com/shakyShane",
-    title: "Web Assembly and the future of the Web",
-    description: "<p>Over the years we&#39;ve seen many attempts by developers to avoid writing Javascript&#10;at all costs - creating new languages that compile <em>into</em> JavaScript is still a common practice&#10;in many language communities.</p>\n<p>But things are changing, for the better. We&#39;re reaching an age where potentially&#10;any high-level language will one day be able run in a browser, with greater speed&#10;and safety - all thanks to Web Assembly.</p>\n<p>This talk will provide practical information about how you can take code written&#10;in a shiny new language like Rust, compile it to a Web Assembly module and then&#10;execute it in the browser.</p>\n",
-    milestone: "January 23rd 2019",
-    img: "https://avatars3.githubusercontent.com/u/1643522?v=4&s=40",
-    handle: "shakyShane",
-    name: "Shane Osbourne"
+    name: "Jamie McCrindle",
+    url: "https://github.com/jamiemccrindle",
+    title: "Async Iterators"
   },
   {
-    apiSpeakerUrl: "https://api.github.com/users/errietta",
-    speakerUrl: "https://github.com/errietta",
-    title: "Build APIs with node, Lambda & Serverless",
-    description: "<p>AWS lambda allows you to build microservices that can be triggered both through HTTP and other ways such  as when something is added to a queue, or on a schedule. We&#39;ll show how it is possible to build an API which consists of small, individual functions that respond to different HTTP requests using AWS lambda and API gateway. In addition to this, we will be deploying using serverless within minutes!</p>\n<h2 id=\"about-me\">About me</h2>\n<p>Polyglot developer with a passion for learning new things.</p>\n",
-    milestone: "January 23rd 2019",
-    img: "https://avatars0.githubusercontent.com/u/134585?v=4&s=40",
-    handle: "errietta",
-    name: "Errietta Kostala"
+    name: "Marco Talento",
+    url: "https://github.com/Talento90",
+    title: "TypeScript: It's time to migrate!"
+  },
+  {
+    name: "Rene Pot",
+    url: "https://github.com/Topener",
+    title: "Building Cross Platform apps with Titanium"
   }
 ]
 ;
 
 const thisMonth = {
-  title: "#80 - January 2019"
+  title: "#82- February 2019"
 };
 
 const nextMonth = {
-  date: "27th February 2019",
+  date: "27th March 2019",
 
   speakers: [
     {
-      name: "Marco Talento",
-      url: "https://github.com/Talento90",
-      title: "TypeScript: It's time to migrate!"
+      name: "Gabrielle von Koss",
+      title: "When you assume, you make an error out of you and me"
     },
     {
-      name: "Rene Pot",
-      url: "https://github.com/Topener",
-      title: "Building Cross Platform apps with Titanium"
-    },
-    {
-      name: "Jamie McCrindle",
-      url: "https://github.com/jamiemccrindle",
-      title: "Async Iterators"
+      name: "Mike Solomon",
+      title: "Testing apps with third-party API integrations"
     }
   ]
 };
@@ -178,16 +166,6 @@ export default class Presentation extends React.Component {
           </Appear>
         </Slide>
 
-        <Slide id="reminder">
-          <Heading size={5} textColor="secondary">💡 A reminder </Heading>
-          <Appear>
-            <Fill textColor="secondary">
-              <p>No Q&A - chat in the breaks instead</p>
-              <p>Please don't interrupt the speaker</p>
-            </Fill>
-          </Appear>
-        </Slide>
-
         <Slide id={"hashtags"}>
           <Heading size={5} textColor="secondary">Tweet</Heading>
           <Heading size={2} textColor="highlight">@lnugORG</Heading>
@@ -219,11 +197,7 @@ export default class Presentation extends React.Component {
 
         <Slide id={"video-production"}>
           <Heading size={5} textColor="highlight">Video</Heading>
-          <Image src={images.nexmoLogo} margin="0px auto 40px" width="800px" />
-        </Slide>
-
-        <Slide id={"nexmo-promo"}>
-          <Image src={images.nexmoslide} margin="0px auto 40px" width="100%" />
+          <Image src={images.pusherLogo} margin="0px auto 40px" width="800px" />
         </Slide>
 
         <Slide id={"cityJS-promo"}>
@@ -232,26 +206,6 @@ export default class Presentation extends React.Component {
           <Text textColor="secondary" italic margin={20}>cityJSConf.org</Text>
           <Image src={images.cityJsLogo} margin="0px auto 40px" width="200px" />
         </Slide>
-
-        <Slide id={"space-promo"}>
-          <Image src={images.spaceStartupslide} margin="0px auto 40px" width="100%" />
-        </Slide>
-
-
-        <Slide id={"codefirstgirls-promo"}>
-          <Heading size={5} textColor="highlight">community</Heading>
-          <Heading size={3} textColor="secondary" >Code First Girls</Heading>
-          <Text textColor="secondary" italic margin={20}>codefirstgirls.org.uk/become-an-instructor.html</Text>
-        </Slide>
-
-        <Slide id={"ijs-promo"}>
-          <Image src={images.ijsLogo} margin="0px auto 40px" width="400px" />
-          <Text textColor="highlight" > 15 % discount code: ijs-lnug-15</Text>
-          <Text textColor="secondary" italic margin={20}>
-          May 13 – 15, 2019 | London<br />
-          EXPO: May 13 & 14, 2019</Text>
-        </Slide>
-
 
         <SummarySlide id="ready"/>
 
@@ -317,7 +271,7 @@ export default class Presentation extends React.Component {
 
 
             <Image src={images.condeNastLogo} margin="10" height="60"/>
-            <Image src={images.nexmoLogo} margin="10" height="40"/>
+            <Image src={images.pusherLogo} margin="10" height="80"/>
             <Image src={images.nearFormLogo} margin="10" height="80" />
           </div>
         </Slide>

@@ -9,7 +9,6 @@ import {
   Deck,
   Heading,
   Fit,
-  Fill,
   Image,
   Link,
   List,
@@ -51,47 +50,42 @@ const images = {
 };
 
 const emcee = {
-  name: "Adam",
-  twitter: "admataz"
+  name: "Matt",
+  twitter: "_mattleach"
 };
 
 
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
   {
-    name: "Jamie McCrindle",
-    url: "https://github.com/jamiemccrindle",
-    title: "Async Iterators"
+    name: "Simon Birchall",
+    url: "https://github.com/SBirchall818",
+    title: "Bootstrapping a startup with SailsJS"
   },
   {
-    name: "Marco Talento",
-    url: "https://github.com/Talento90",
-    title: "TypeScript: It's time to migrate!"
-  },
-  {
-    name: "Rene Pot",
-    url: "https://github.com/Topener",
-    title: "Building Cross Platform apps with Titanium"
+    name: "Colin Eberhardt",
+    url: "https://github.com/ColinEberhardt",
+    title: "Build your own WebAssembly Compiler"
   }
 ]
 ;
 
 const thisMonth = {
-  title: "#82- February 2019"
+  title: "#83- April 2019"
 };
 
 const nextMonth = {
-  date: "27th March 2019",
+  date: "22nd May 2019",
 
   speakers: [
     {
-      name: "Gabrielle von Koss",
-      title: "When you assume, you make an error out of you and me"
-    },
-    {
-      name: "Mike Solomon",
-      title: "Testing apps with third-party API integrations"
+      name: "Chinrank",
+      title: "Native implementation of curl in node"
     }
+    // {
+    //   name: "Mike Solomon",
+    //   title: "Testing apps with third-party API integrations"
+    // }
   ]
 };
 
@@ -151,7 +145,7 @@ export default class Presentation extends React.Component {
           <Appear><Heading size={5} textColor="secondary">📡 Wifi: <Code textColor="secondary">CN Guest</Code> </Heading></Appear>
         </Slide>
 
-        <Slide id="code-of-conduct">
+        <Slide id={"code-of-conduct"}>
           <Heading size={5} textColor="secondary">⭐️ Code of Conduct </Heading>
           <Appear>
             <BlockQuote>
@@ -190,7 +184,7 @@ export default class Presentation extends React.Component {
           <Image src={images.condeNastLogo} margin="0px auto 40px" width="800px" padding="10px" />
         </Slide>
 
-        <Slide id={"food-and-drink"} style="background: #fff">
+        <Slide id={"food-and-drink"}>
           <Heading size={5} textColor="highlight">Food and drink</Heading>
           <Image src={images.nearFormLogo} margin="0px auto 40px" height="293px" padding="10px" />
         </Slide>
@@ -230,8 +224,8 @@ export default class Presentation extends React.Component {
         <Slide id={"get-involved"}>
           <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
           <Heading size={5} textColor="highlight">Get Involved</Heading>
-          <Heading size="6" textColor="secondary">Feedback<br /><Code type="bold" textColor="secondary">github.com/lnug/feedback</Code></Heading>
-          <Heading size="6" textColor="secondary">Gitter<br /><Code type="bold" textColor="secondary">gitter.com/lnug/discuss</Code></Heading>
+          <Heading size={6} textColor="secondary">Feedback<br /><Code type="bold" textColor="secondary">github.com/lnug/feedback</Code></Heading>
+          <Heading size={6} textColor="secondary">Gitter<br /><Code type="bold" textColor="secondary">gitter.com/lnug/discuss</Code></Heading>
         </Slide>
 
 

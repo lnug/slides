@@ -9,7 +9,6 @@ import {
   Deck,
   Heading,
   Fit,
-  Fill,
   Image,
   Link,
   List,
@@ -42,6 +41,7 @@ const images = {
   nearFormLogo: require("../assets/logos/NF__Primary_Logo_Reversed_Horizontal.svg"),
   condeNastLogo: require("../assets/logos/Conde_Nast_logo.svg"),
   pusherLogo: require("../assets/logos/pusher_logo_white.png"),
+  pusherPromo: require("../assets/announcements/Pusher_promo.jpg"),
   cityJsLogo: require("../assets/logos/cityJSConf.jpg"),
   nexmoslide: require("../assets/announcements/Nexmo_LNUG.001.png"),
   spaceStartupslide: require("../assets/announcements/SWOnePager.png"),
@@ -51,47 +51,42 @@ const images = {
 };
 
 const emcee = {
-  name: "Adam",
-  twitter: "admataz"
+  name: "Matt",
+  twitter: "_mattleach"
 };
 
 
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
   {
-    name: "Jamie McCrindle",
-    url: "https://github.com/jamiemccrindle",
-    title: "Async Iterators"
+    name: "Simon Birchall",
+    url: "https://github.com/SBirchall818",
+    title: "Bootstrapping a startup with SailsJS"
   },
   {
-    name: "Marco Talento",
-    url: "https://github.com/Talento90",
-    title: "TypeScript: It's time to migrate!"
-  },
-  {
-    name: "Rene Pot",
-    url: "https://github.com/Topener",
-    title: "Building Cross Platform apps with Titanium"
+    name: "Colin Eberhardt",
+    url: "https://github.com/ColinEberhardt",
+    title: "Build your own WebAssembly Compiler"
   }
 ]
 ;
 
 const thisMonth = {
-  title: "#82- February 2019"
+  title: "#83- April 2019"
 };
 
 const nextMonth = {
-  date: "27th March 2019",
+  date: "22nd May 2019",
 
   speakers: [
     {
-      name: "Gabrielle von Koss",
-      title: "When you assume, you make an error out of you and me"
-    },
-    {
-      name: "Mike Solomon",
-      title: "Testing apps with third-party API integrations"
+      name: "Chinrank",
+      title: "Native implementation of curl in node"
     }
+    // {
+    //   name: "Mike Solomon",
+    //   title: "Testing apps with third-party API integrations"
+    // }
   ]
 };
 
@@ -151,7 +146,7 @@ export default class Presentation extends React.Component {
           <Appear><Heading size={5} textColor="secondary">📡 Wifi: <Code textColor="secondary">CN Guest</Code> </Heading></Appear>
         </Slide>
 
-        <Slide id="code-of-conduct">
+        <Slide id={"code-of-conduct"}>
           <Heading size={5} textColor="secondary">⭐️ Code of Conduct </Heading>
           <Appear>
             <BlockQuote>
@@ -183,6 +178,11 @@ export default class Presentation extends React.Component {
         <Slide id={"jobs"}>
           <Heading size={3} textColor="highlight">jobs!</Heading>
           <Heading size={4} textColor="secondary"><Link href="https://gitter.im/lnug/london-node-jobs" target="_blank"><Code textColor="secondary">gitter.im/lnug/london-node-jobs</Code></Link></Heading>
+          <Appear>
+            <Heading size={6} textColor="secondary" margin="20px 0" textSize="20px" textColor="highlight">
+              Make sure you speak to companies at the jobs table
+            </Heading>
+          </Appear>
         </Slide>
 
         <Slide id={"venue"}>
@@ -190,7 +190,7 @@ export default class Presentation extends React.Component {
           <Image src={images.condeNastLogo} margin="0px auto 40px" width="800px" padding="10px" />
         </Slide>
 
-        <Slide id={"food-and-drink"} style="background: #fff">
+        <Slide id={"food-and-drink"}>
           <Heading size={5} textColor="highlight">Food and drink</Heading>
           <Image src={images.nearFormLogo} margin="0px auto 40px" height="293px" padding="10px" />
         </Slide>
@@ -198,6 +198,10 @@ export default class Presentation extends React.Component {
         <Slide id={"video-production"}>
           <Heading size={5} textColor="highlight">Video</Heading>
           <Image src={images.pusherLogo} margin="0px auto 40px" width="800px" />
+        </Slide>
+
+        <Slide id={"pusher-promo"}>
+          <Image src={images.pusherPromo} margin="0px auto 40px" width="100%" />
         </Slide>
 
         <Slide id={"cityJS-promo"}>
@@ -230,8 +234,8 @@ export default class Presentation extends React.Component {
         <Slide id={"get-involved"}>
           <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
           <Heading size={5} textColor="highlight">Get Involved</Heading>
-          <Heading size="6" textColor="secondary">Feedback<br /><Code type="bold" textColor="secondary">github.com/lnug/feedback</Code></Heading>
-          <Heading size="6" textColor="secondary">Gitter<br /><Code type="bold" textColor="secondary">gitter.com/lnug/discuss</Code></Heading>
+          <Heading size={6} textColor="secondary">Feedback<br /><Code type="bold" textColor="secondary">github.com/lnug/feedback</Code></Heading>
+          <Heading size={6} textColor="secondary">Gitter<br /><Code type="bold" textColor="secondary">gitter.com/lnug/discuss</Code></Heading>
         </Slide>
 
 

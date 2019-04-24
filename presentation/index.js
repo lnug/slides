@@ -41,6 +41,7 @@ const images = {
   nearFormLogo: require("../assets/logos/NF__Primary_Logo_Reversed_Horizontal.svg"),
   condeNastLogo: require("../assets/logos/Conde_Nast_logo.svg"),
   pusherLogo: require("../assets/logos/pusher_logo_white.png"),
+  pusherPromo: require("../assets/announcements/Pusher_promo.jpg"),
   cityJsLogo: require("../assets/logos/cityJSConf.jpg"),
   nexmoslide: require("../assets/announcements/Nexmo_LNUG.001.png"),
   spaceStartupslide: require("../assets/announcements/SWOnePager.png"),
@@ -177,6 +178,11 @@ export default class Presentation extends React.Component {
         <Slide id={"jobs"}>
           <Heading size={3} textColor="highlight">jobs!</Heading>
           <Heading size={4} textColor="secondary"><Link href="https://gitter.im/lnug/london-node-jobs" target="_blank"><Code textColor="secondary">gitter.im/lnug/london-node-jobs</Code></Link></Heading>
+          <Appear>
+            <Heading size={6} textColor="secondary" margin="20px 0" textSize="20px" textColor="highlight">
+              Make sure you speak to companies at the jobs table
+            </Heading>
+          </Appear>
         </Slide>
 
         <Slide id={"venue"}>
@@ -192,6 +198,10 @@ export default class Presentation extends React.Component {
         <Slide id={"video-production"}>
           <Heading size={5} textColor="highlight">Video</Heading>
           <Image src={images.pusherLogo} margin="0px auto 40px" width="800px" />
+        </Slide>
+
+        <Slide id={"pusher-promo"}>
+          <Image src={images.pusherPromo} margin="0px auto 40px" width="100%" />
         </Slide>
 
         <Slide id={"cityJS-promo"}>

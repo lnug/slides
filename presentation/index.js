@@ -45,7 +45,6 @@ const images = {
   condeNastLogo: require("../assets/logos/Conde_Nast_logo.svg"),
   pusherLogo: require("../assets/logos/pusher_logo_white.png"),
   pusherPromo: require("../assets/announcements/Pusher_promo.jpg"),
-  cityJsLogo: require("../assets/logos/cityJSConf.jpg"),
   nexmoslide: require("../assets/announcements/Nexmo_LNUG.001.png"),
   spaceStartupslide: require("../assets/announcements/SWOnePager.png"),
   ijsLogo: require("../assets/logos/iJS-logo_desktop@2x.png"),
@@ -255,19 +254,6 @@ export default class Presentation extends React.Component {
 
         <Slide id={"pusher-promo"}>
           <Image src={images.pusherPromo} margin="0px auto 40px" width="100%" />
-        </Slide>
-
-        <Slide id={"cityJS-promo"}>
-          <Heading size={5} textColor="highlight">
-            community
-          </Heading>
-          <Heading size={3} textColor="secondary">
-            CityJsConf 2019
-          </Heading>
-          <Text textColor="secondary" italic margin={20}>
-            cityJSConf.org
-          </Text>
-          <Image src={images.cityJsLogo} margin="0px auto 40px" width="200px" />
         </Slide>
 
         <SummarySlide id="ready" />

@@ -53,38 +53,32 @@ const images = {
 };
 
 const emcee = {
-  name: "Aga",
-  twitter: "aga_code"
+  name: "adam",
+  twitter: "admataz"
 };
 
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
   {
-    name: "Forbes Lindesay",
-    url: "https://github.com/ForbesLindesay",
-    title: "Security in Node.js"
+    name: "Jason Ian Green",
+    title: "Concurrent editing with JSON Patch and Operational Transformation"
   },
   {
-    name: "Thomas Ankcorn",
-    url: "https://github.com/Ankcorn",
-    title: "Indie Hacking with Postgraphile"
+    name: "Nick O'Leary",
+    title: "Managing multiple npm modules in a single repo"
   }
 ];
 const thisMonth = {
-  title: "#87 - August 2019"
+  title: "#88 - September 2019"
 };
 
 const nextMonth = {
-  date: "25th September 2019",
+  date: "23rd October 2019",
 
   speakers: [
     {
-      name: "Jason Ian Green",
-      title: "Concurrent editing with JSON Patch and Operational Transformation"
-    },
-    {
-      name: "Nick O'Leary",
-      title: "Managing multiple npm modules in a single repo"
+      name: "🤔",
+      title: "node.js stuff"
     }
   ]
 };

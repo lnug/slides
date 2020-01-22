@@ -49,7 +49,9 @@ const images = {
   spaceStartupslide: require("../assets/announcements/SWOnePager.png"),
   ijsLogo: require("../assets/logos/iJS-logo_desktop@2x.png"),
   pizza: require("../assets/pizza-1.gif"),
-  cheers: require("../assets/cheers.gif")
+  cheers: require("../assets/cheers.gif"),
+  JSNSD: require("../assets/openjs_nodejs_services_developer.png"),
+  JSNAD: require("../assets/openjs_nodejs_application_developer.png")
 };
 
 const emcee = {
@@ -59,23 +61,36 @@ const emcee = {
 
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
-  {
-    name: "Jason Ian Green",
-    title: "Concurrent editing with JSON Patch and Operational Transformation"
-  },
-  {
-    name: "Nick O'Leary",
-    title: "Managing multiple npm modules in a single repo"
-  }
+  { name: "Beth Griggs",
+    twitter: "BethGriggs_",
+    title: "What's new to LTS with Node.js 12" },
+  { name: "Enrique Lacal",
+    twitter: "enriquel8",
+    title: "Simplify deploying cloud-native apps to Kubernetes" },
+  { name: "Lucas Fernandes da Costa",
+    twitter: "thewizardlucas",
+    title: "How I’m Still not Using GUIs in 2019" },
+  { name: "Hew Ingram",
+    twitter: "hewIngram",
+    title: "A talk not at all about node..." },
+  { name: "Diogo",
+    twitter: "diogofcunha",
+    title: "Async generators in real life" }
 ];
+
+
 const thisMonth = {
-  title: "#88 - September 2019"
+  title: "#89 - ⚡️October 2019 ⚡️"
 };
 
 const nextMonth = {
-  date: "23rd October 2019",
+  date: "27th November 2019",
 
   speakers: [
+    {
+      name: "Tatenda Chawanzwa",
+      title: "State Management with React Apollo "
+    },
     {
       name: "🤔",
       title: "node.js stuff"
@@ -98,6 +113,7 @@ const SpeakerSlide = ({ speaker }) => {
       <Heading size={4} textColor="secondary">
         {speaker.name}
       </Heading>
+      {speaker.twitter && <Text textColor="secondary" textSize={20}>Twitter: @{speaker.twitter} </Text>}
       <Heading size={6} textColor="secondary">
         <S type="italics">{speaker.title}</S>
       </Heading>
@@ -111,7 +127,7 @@ const SummarySlide = ({ id }) => (
     <Heading size={6} textColor="highlight">
       {thisMonth.title}
     </Heading>
-    {speakers.map(speaker => (
+    {speakers.map((speaker) => (
       <Fit key={speaker.title} textColor="secondary" textSize={38} margin="20px 0">
         {speaker.name}{" "}
         <S type="italics" textSize={24}>
@@ -239,6 +255,17 @@ export default class Presentation extends React.Component {
           <Image src={images.nearFormLogo} margin="0px auto 40px" height="293px" padding="10px" />
         </Slide>
 
+        <Slide id={"dev-cert-promo"}>
+          <Heading size={5} textColor="highlight">
+            Node.js Developer Certification
+          </Heading>
+          <Image src={images.JSNAD} margin="0px auto 40px" width="20%" />
+          <Image src={images.JSNSD} margin="0px auto 40px" width="20%" />
+          <Link href="https://nearform.com/community/nodejs-certification" target="_blank">
+            <Code textColor="secondary">nearform.com/community/nodejs-certification</Code>
+          </Link>
+        </Slide>
+
         <Slide id={"video-production"}>
           <Heading size={5} textColor="highlight">
             Video
@@ -250,19 +277,6 @@ export default class Presentation extends React.Component {
           <Image src={images.pusherPromo} margin="0px auto 40px" width="100%" />
         </Slide>
 
-        <SummarySlide id="ready" />
-
-        <SpeakerSlide speaker={speakers[0]} />
-
-        <Slide id={"community-announcments"}>
-          <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
-          <Heading size={3} textColor="highlight" margin={50}>
-            Community Announcements
-          </Heading>
-          <Heading size={5} textColor="secondary">
-            Have something to share?
-          </Heading>
-        </Slide>
 
         <Slide id={"submit-a-talk"}>
           <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
@@ -274,7 +288,16 @@ export default class Presentation extends React.Component {
           </Code>
         </Slide>
 
-        {speakers.length > 1 && <SpeakerSlide speaker={speakers[1]} />}
+        <Slide id={"community-announcments"}>
+          <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
+          <Heading size={3} textColor="highlight" margin={50}>
+            Community Announcements
+          </Heading>
+          <Heading size={5} textColor="secondary">
+            Have something to share?
+          </Heading>
+        </Slide>
+
 
         <Slide id={"get-involved"}>
           <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
@@ -297,7 +320,14 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
 
-        {speakers.length > 2 && <SpeakerSlide speaker={speakers[2]} />}
+        <SummarySlide id="ready" />
+
+        <SpeakerSlide speaker={speakers[0]} />
+        <SpeakerSlide speaker={speakers[1]} />
+        <SpeakerSlide speaker={speakers[2]} />
+        <SpeakerSlide speaker={speakers[3]} />
+        <SpeakerSlide speaker={speakers[4]} />
+
 
         <Slide id={"nex-time"}>
           <Image src={images.lnugLogo} margin="0px auto 0px" height="140px" />
@@ -308,7 +338,7 @@ export default class Presentation extends React.Component {
             {nextMonth.date}
           </Heading>
           <List margin="20px 5%">
-            {nextMonth.speakers.map(speaker => (
+            {nextMonth.speakers.map((speaker) => (
               <ListItem key={speaker.title} textColor="secondary" textSize={30} margin="20px 0">
                 {speaker.name} <S type="italics"> - {speaker.title}</S>
               </ListItem>

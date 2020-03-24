@@ -42,16 +42,21 @@ const theme = createTheme(
 const images = {
   lnugLogo: require("../assets/lnug-logo.svg"),
   nearFormLogo: require("../assets/logos/NF__Primary_Logo_Reversed_Horizontal.svg"),
-  condeNastLogo: require("../assets/logos/Conde_Nast_logo.svg"),
+  beameryLogo: require("../assets/beamery-logo.png"),
   pusherLogo: require("../assets/logos/pusher_logo_white.png"),
   pusherPromo: require("../assets/announcements/Pusher_promo.jpg"),
-  nexmoslide: require("../assets/announcements/Nexmo_LNUG.001.png"),
-  spaceStartupslide: require("../assets/announcements/SWOnePager.png"),
-  ijsLogo: require("../assets/logos/iJS-logo_desktop@2x.png"),
+  reactAle: require("../assets/react-ale.png"),
+  reactSummitLogo: require("../assets/logos/reactsummit.jpg"),
+
   pizza: require("../assets/pizza-1.gif"),
   cheers: require("../assets/cheers.gif"),
-  JSNSD: require("../assets/openjs_nodejs_services_developer.png"),
-  JSNAD: require("../assets/openjs_nodejs_application_developer.png")
+
+  cityJSLogo: require("../assets/logos/cityJSConf.png"),
+  cityJS1: require("../assets/announcements/cityjs-promo-2020/11.png"),
+  cityJS2: require("../assets/announcements/cityjs-promo-2020/12.png"),
+  cityJS3: require("../assets/announcements/cityjs-promo-2020/13.png"),
+  singerTavernMap: require("../assets/singer-tavern.png"),
+
 };
 
 const emcee = {
@@ -61,30 +66,24 @@ const emcee = {
 
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
-  { name: "Beth Griggs",
-    twitter: "BethGriggs_",
-    title: "What's new to LTS with Node.js 12" },
-  { name: "Enrique Lacal",
-    twitter: "enriquel8",
-    title: "Simplify deploying cloud-native apps to Kubernetes" },
-  { name: "Lucas Fernandes da Costa",
-    twitter: "thewizardlucas",
-    title: "How I’m Still not Using GUIs in 2019" },
+  { name: "Rob Tweed",
+    twitter: "rtweed",
+    title: "QEWD-JSdb: It's a Database, Jim, but not as we know it!" },
   { name: "Hew Ingram",
     twitter: "hewIngram",
-    title: "A talk not at all about node..." },
-  { name: "Diogo",
-    twitter: "diogofcunha",
-    title: "Async generators in real life" }
+    title: "LNUG 2020 retro buzz" },
+  { name: "Adam Davis",
+    twitter: "admataz",
+    title: "Introducing Bangle.js - The NodeWatch" }
 ];
 
 
 const thisMonth = {
-  title: "#89 - ⚡️October 2019 ⚡️"
+  title: "#91 - January 2020"
 };
 
 const nextMonth = {
-  date: "27th November 2019",
+  date: "26th February 2020",
 
   speakers: [
     {
@@ -92,13 +91,13 @@ const nextMonth = {
       title: "State Management with React Apollo "
     },
     {
-      name: "🤔",
+      name: "🤔 - you?",
       title: "node.js stuff"
     }
   ]
 };
 
-// ================== rusable components
+// ================== reusable components
 
 const SpeakerSlide = ({ speaker }) => {
   if (!speaker) {
@@ -159,17 +158,17 @@ export default class Presentation extends React.Component {
           </Heading>
           <Appear>
             <Heading size={5} textColor="secondary">
-              🚻 Toilets: ask for a pass{" "}
+              🚻 Toilets
             </Heading>
           </Appear>
           <Appear>
             <Heading size={5} textColor="secondary">
-              🚒 Fire Exits: next to the toilets{" "}
+              🚒 Fire Exits
             </Heading>
           </Appear>
           <Appear>
             <Heading size={5} textColor="secondary">
-              📡 Wifi: <Code textColor="secondary">CN Guest</Code>{" "}
+              📡 Wifi
             </Heading>
           </Appear>
         </Slide>
@@ -245,7 +244,7 @@ export default class Presentation extends React.Component {
           <Heading size={5} textColor="highlight">
             Venue
           </Heading>
-          <Image src={images.condeNastLogo} margin="0px auto 40px" width="800px" padding="10px" />
+          <Image src={images.beameryLogo} margin="0px auto 40px" width="500px" padding="10px" />
         </Slide>
 
         <Slide id={"food-and-drink"}>
@@ -255,16 +254,13 @@ export default class Presentation extends React.Component {
           <Image src={images.nearFormLogo} margin="0px auto 40px" height="293px" padding="10px" />
         </Slide>
 
-        <Slide id={"dev-cert-promo"}>
+        <Slide id={"react-ale"}>
           <Heading size={5} textColor="highlight">
-            Node.js Developer Certification
+           :) Bonus!
           </Heading>
-          <Image src={images.JSNAD} margin="0px auto 40px" width="20%" />
-          <Image src={images.JSNSD} margin="0px auto 40px" width="20%" />
-          <Link href="https://nearform.com/community/nodejs-certification" target="_blank">
-            <Code textColor="secondary">nearform.com/community/nodejs-certification</Code>
-          </Link>
+          <Image src={images.reactAle} margin="0px auto 40px" height="493px" padding="10px" />
         </Slide>
+
 
         <Slide id={"video-production"}>
           <Heading size={5} textColor="highlight">
@@ -278,17 +274,41 @@ export default class Presentation extends React.Component {
         </Slide>
 
 
-        <Slide id={"submit-a-talk"}>
-          <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
-          <Heading size={3} textColor="highlight">
-            Submit a talk proposal!
+
+
+        <Slide id={"cityjsconf-promo"}>
+          <Image src={images.cityJSLogo} margin="0px auto 40px" />
+          <Heading size={5} textColor="highlight">
+            Tonight! ticket giveaway for CityJS Conference 25-27 March  - stay tuned
           </Heading>
-          <Code type="bold" textColor="secondary">
-            github.com/lnug/speakers
-          </Code>
+          <Heading size={5} textColor="secondary">cityjsconf.org</Heading>
+        </Slide>
+        <Slide id={"cityjsconf-promo1"}>
+          <Image src={images.cityJS1} margin="0px auto 40px" width="100%" />
+          <Heading size={5} textColor="secondary">cityjsconf.org</Heading>
+
+        </Slide>
+        <Slide id={"cityjsconf-promo2"}>
+          <Image src={images.cityJS2} margin="0px auto 40px" width="100%" />
+          <Heading size={5} textColor="secondary">cityjsconf.org</Heading>
+
+        </Slide>
+        <Slide id={"cityjsconf-prom3"}>
+          <Image src={images.cityJS3} margin="0px auto 40px" width="100%" />
+          <Heading size={5} textColor="secondary">cityjsconf.org</Heading>
+
         </Slide>
 
-        <Slide id={"community-announcments"}>
+
+        <Slide id={"reactsummit-promo"}>
+          <Image src={images.reactSummitLogo} margin="0px auto 40px" />
+          <Heading size={5} textColor="highlight">
+            Tonight! ticket giveaway React Summit in Amsterdam in April- stay tuned
+          </Heading>
+          <Heading size={5} textColor="secondary">reactsummit.com</Heading>
+        </Slide>
+
+        <Slide id={"community-announecments"}>
           <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
           <Heading size={3} textColor="highlight" margin={50}>
             Community Announcements
@@ -297,7 +317,6 @@ export default class Presentation extends React.Component {
             Have something to share?
           </Heading>
         </Slide>
-
 
         <Slide id={"get-involved"}>
           <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
@@ -320,13 +339,32 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
 
+        <Slide id={"submit-a-talk"}>
+          <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
+          <Heading size={3} textColor="highlight">
+            Submit a talk proposal!
+          </Heading>
+          <Code type="bold" textColor="secondary">
+            github.com/lnug/speakers
+          </Code>
+        </Slide>
+
         <SummarySlide id="ready" />
 
         <SpeakerSlide speaker={speakers[0]} />
         <SpeakerSlide speaker={speakers[1]} />
         <SpeakerSlide speaker={speakers[2]} />
-        <SpeakerSlide speaker={speakers[3]} />
-        <SpeakerSlide speaker={speakers[4]} />
+
+
+        <Slide id={"competition-time"}>
+          <Image src={images.cityJSLogo} margin="0px auto 40px" height="80px" />
+          <Image src={images.reactSummitLogo} margin="0px auto 40px" height="80px" />
+          <Heading size={5} textColor="highlight">
+            Competition time!
+          </Heading>
+          <Heading size={5} textColor="secondary">cityjsconf.org</Heading>
+          <Heading size={5} textColor="secondary">reactsummit.com</Heading>
+        </Slide>
 
 
         <Slide id={"nex-time"}>
@@ -366,23 +404,21 @@ export default class Presentation extends React.Component {
             <br />
             and thanks again...
             <br />
-            <Image src={images.condeNastLogo} margin="10" height="60" />
+            <Image src={images.beameryLogo} margin="10" height="60" />
             <Image src={images.pusherLogo} margin="10" height="80" />
             <Image src={images.nearFormLogo} margin="10" height="80" />
           </div>
         </Slide>
 
         <Slide>
-          <Heading size={5} textColor="highlight" margin={30}>
-            After Party
+          <Heading size={5} textColor="highlight" margin={10}>
+          The Singer Tavern
           </Heading>
-          <Heading size={5} textColor="secondary">
-            Theodore Bullfrog
-          </Heading>
+
           <Text textColor="secondary" margin={10}>
-            26-30 John Adam St, London WC2N 6HL
+          1 CITY ROAD, EC1Y 1AG
           </Text>
-          <Image src={images.cheers.replace("/", "")} margin="40px auto 0px" height="200px" />
+          <Image src={images.singerTavernMap} margin="40px auto 0px" height="500px"/>
           <Heading size={5} textColor="highlight">
             Before you go...
           </Heading>

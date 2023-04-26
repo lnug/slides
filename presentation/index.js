@@ -41,8 +41,8 @@ const theme = createTheme(
 
 const images = {
   lnugLogo: require("../assets/lnug-logo.svg"),
-  nearFormLogo: require("../assets/logos/NF__Primary_Logo_Reversed_Horizontal.svg"),
-  beameryLogo: require("../assets/beamery-logo.png"),
+  baselimeLogo: require("../assets/logos/Baselime_Logo_RGB_Primary_DarkBg_Neutral.2acb9b0.svg"),
+  ballysLogo: require("../assets/logos/Bally_s_Corporation_Logo.jpg"),
   pusherLogo: require("../assets/logos/pusher_logo_white.png"),
   pusherPromo: require("../assets/announcements/Pusher_promo.jpg"),
   reactAle: require("../assets/react-ale.png"),
@@ -66,34 +66,39 @@ const emcee = {
 
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
-  { name: "Rob Tweed",
-    twitter: "rtweed",
-    title: "QEWD-JSdb: It's a Database, Jim, but not as we know it!" },
-  { name: "Hew Ingram",
-    twitter: "hewIngram",
-    title: "LNUG 2020 retro buzz" },
-  { name: "Adam Davis",
-    twitter: "admataz",
-    title: "Introducing Bangle.js - The NodeWatch" }
+  { name: "Ahmed Elsakaan",
+    twitter: "ixahmedxii ",
+    title: "Creating end-to-end typesafe APIs with tRPC"
+   },
+   { name: "Jiasheng",
+    twitter: "jiashenggo ",
+    title: "⚡️ Zenstack make fullstack development easy"
+   },
+   { name: "Erry Kostala",
+    twitter: " ",
+    title: "⚡️ web antipatterns"
+   },
+   { name: "Akash Shirish Joshi",
+    twitter: "thewritingdev",
+    title: "⚡️ Breaking client-server barriers with rocketrpc"
+   },
+   { name: "⚡️ ",
+   twitter: "",
+   title: "⚡️ got a lightning talk subject? "
+  },
+
 ];
 
 
 const thisMonth = {
-  title: "#91 - January 2020"
+  title: "#97 - February 2023"
 };
 
 const nextMonth = {
-  date: "26th February 2020",
+  date: "TBC",
 
   speakers: [
-    {
-      name: "Tatenda Chawanzwa",
-      title: "State Management with React Apollo "
-    },
-    {
-      name: "🤔 - you?",
-      title: "node.js stuff"
-    }
+   
   ]
 };
 
@@ -192,7 +197,7 @@ export default class Presentation extends React.Component {
             </BlockQuote>
           </Appear>
           <Appear>
-            <Text textColor="secondary">lnug.org/code-of-conduct.html</Text>
+            <Text textColor="secondary">lnug.org/code-of-conduct</Text>
           </Appear>
         </Slide>
 
@@ -218,48 +223,28 @@ export default class Presentation extends React.Component {
             discuss!
           </Heading>
           <Heading size={4} textColor="secondary">
-            <Link href="http://gitter.im/lnug/discuss" target="_blank">
-              <Code textColor="secondary">gitter.im/lnug/discuss</Code>
+            <Link href="https://discord.gg/DtPTak5pdQ" target="_blank">
+              <Code textColor="secondary">https://discord.gg/DtPTak5pdQ</Code>
             </Link>
           </Heading>
         </Slide>
 
-        <Slide id={"jobs"}>
-          <Heading size={3} textColor="highlight">
-            jobs!
-          </Heading>
-          <Heading size={4} textColor="secondary">
-            <Link href="https://gitter.im/lnug/london-node-jobs" target="_blank">
-              <Code textColor="secondary">gitter.im/lnug/london-node-jobs</Code>
-            </Link>
-          </Heading>
-          <Appear>
-            <Heading size={6} textColor="secondary" margin="20px 0" textSize="20px" textColor="highlight">
-              Make sure you speak to companies at the jobs table
-            </Heading>
-          </Appear>
-        </Slide>
 
         <Slide id={"venue"}>
           <Heading size={5} textColor="highlight">
             Venue
           </Heading>
-          <Image src={images.beameryLogo} margin="0px auto 40px" width="500px" padding="10px" />
+          <Image src={images.ballysLogo} margin="0px auto 40px" width="500px" padding="10px" />
         </Slide>
 
         <Slide id={"food-and-drink"}>
           <Heading size={5} textColor="highlight">
             Food and drink
           </Heading>
-          <Image src={images.nearFormLogo} margin="0px auto 40px" height="293px" padding="10px" />
+          <Image src={images.baselimeLogo} margin="0px auto 40px" height="293px" padding="10px" />
         </Slide>
 
-        <Slide id={"react-ale"}>
-          <Heading size={5} textColor="highlight">
-           :) Bonus!
-          </Heading>
-          <Image src={images.reactAle} margin="0px auto 40px" height="493px" padding="10px" />
-        </Slide>
+  
 
 
         <Slide id={"video-production"}>
@@ -269,9 +254,6 @@ export default class Presentation extends React.Component {
           <Image src={images.pusherLogo} margin="0px auto 40px" width="800px" />
         </Slide>
 
-        <Slide id={"pusher-promo"}>
-          <Image src={images.pusherPromo} margin="0px auto 40px" width="100%" />
-        </Slide>
 
 
 
@@ -279,34 +261,11 @@ export default class Presentation extends React.Component {
         <Slide id={"cityjsconf-promo"}>
           <Image src={images.cityJSLogo} margin="0px auto 40px" />
           <Heading size={5} textColor="highlight">
-            Tonight! ticket giveaway for CityJS Conference 25-27 March  - stay tuned
+            Tonight! ticket giveaway for CityJS Conference  - stay tuned
           </Heading>
           <Heading size={5} textColor="secondary">cityjsconf.org</Heading>
         </Slide>
-        <Slide id={"cityjsconf-promo1"}>
-          <Image src={images.cityJS1} margin="0px auto 40px" width="100%" />
-          <Heading size={5} textColor="secondary">cityjsconf.org</Heading>
-
-        </Slide>
-        <Slide id={"cityjsconf-promo2"}>
-          <Image src={images.cityJS2} margin="0px auto 40px" width="100%" />
-          <Heading size={5} textColor="secondary">cityjsconf.org</Heading>
-
-        </Slide>
-        <Slide id={"cityjsconf-prom3"}>
-          <Image src={images.cityJS3} margin="0px auto 40px" width="100%" />
-          <Heading size={5} textColor="secondary">cityjsconf.org</Heading>
-
-        </Slide>
-
-
-        <Slide id={"reactsummit-promo"}>
-          <Image src={images.reactSummitLogo} margin="0px auto 40px" />
-          <Heading size={5} textColor="highlight">
-            Tonight! ticket giveaway React Summit in Amsterdam in April- stay tuned
-          </Heading>
-          <Heading size={5} textColor="secondary">reactsummit.com</Heading>
-        </Slide>
+        
 
         <Slide id={"community-announecments"}>
           <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
@@ -354,17 +313,18 @@ export default class Presentation extends React.Component {
         <SpeakerSlide speaker={speakers[0]} />
         <SpeakerSlide speaker={speakers[1]} />
         <SpeakerSlide speaker={speakers[2]} />
+        <SpeakerSlide speaker={speakers[3]} />
+        <SpeakerSlide speaker={speakers[4]} />
 
 
-        <Slide id={"competition-time"}>
+        {/* <Slide id={"competition-time"}>
           <Image src={images.cityJSLogo} margin="0px auto 40px" height="80px" />
-          <Image src={images.reactSummitLogo} margin="0px auto 40px" height="80px" />
           <Heading size={5} textColor="highlight">
             Competition time!
           </Heading>
           <Heading size={5} textColor="secondary">cityjsconf.org</Heading>
           <Heading size={5} textColor="secondary">reactsummit.com</Heading>
-        </Slide>
+        </Slide> */}
 
 
         <Slide id={"nex-time"}>
@@ -386,9 +346,7 @@ export default class Presentation extends React.Component {
           <Code textColor="secondary" bold>
             meetup.com/london-nodejs
           </Code>
-          <Text textColor="highlight" italic margin={20}>
-            The 4th Wednesday of the month
-          </Text>
+          
         </Slide>
 
         <Slide align={"center center"}>
@@ -404,24 +362,23 @@ export default class Presentation extends React.Component {
             <br />
             and thanks again...
             <br />
-            <Image src={images.beameryLogo} margin="10" height="60" />
+            <Image src={images.ballysLogo} margin="10" height="60" />
             <Image src={images.pusherLogo} margin="10" height="80" />
-            <Image src={images.nearFormLogo} margin="10" height="80" />
+            <Image src={images.baselimeLogo} margin="10" height="80" />
           </div>
         </Slide>
 
         <Slide>
           <Heading size={5} textColor="highlight" margin={10}>
-          The Singer Tavern
+          To the Pub? 
           </Heading>
 
           <Text textColor="secondary" margin={10}>
-          1 CITY ROAD, EC1Y 1AG
+          Before you go...
           </Text>
-          <Image src={images.singerTavernMap} margin="40px auto 0px" height="500px"/>
-          <Heading size={5} textColor="highlight">
-            Before you go...
-          </Heading>
+          
+
+        
           Tidy up after yourself! Get involved!
         </Slide>
       </Deck>

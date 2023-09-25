@@ -41,9 +41,10 @@ const theme = createTheme(
 
 const images = {
   lnugLogo: require("../assets/lnug-logo.svg"),
-  baselimeLogo: require("../assets/logos/Baselime_Logo_RGB_Primary_DarkBg_Neutral.2acb9b0.svg"),
+  // baselimeLogo: require("../assets/logos/Baselime_Logo_RGB_Primary_DarkBg_Neutral.2acb9b0.svg"),
+  pullumiLogo: require("../assets/logos/pullumi.png"),
 
-  baselimeChart: require("../assets/baselime-chart.jpg"),
+  // baselimeChart: require("../assets/baselime-chart.jpg"),
   makersLogo: require("../assets/logos/makers-logo.png"),
   pusherLogo: require("../assets/logos/pusher_logo_white.png"),
   
@@ -60,24 +61,21 @@ const emcee = {
 
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
-  { name: "Allen Helton",
-    twitter: "allenheltondev ",
-    title: "Creating best-in-class developer experience for your SDKs"
+  { name: "Akash Joshi",
+    twitter: "thewritingdev ",
+    title: "Destroying Client-Server Barriers using TypeScript"
    },
-     { name: "Mike Borozdin",
-    twitter: "mikeborozdin",
-    title: "Fastify - a fast web framework with batteries attached and amazing TypeScript suppor"
-   },
-   { name: "⚡️ ",
+
+   { name: "⚡️ Open Mic - community and projects",
    twitter: "",
-   title: "⚡️ got a lightning talk subject? "
+   title: "got a lightning talk or project to share? "
   },
 
 ];
 
 
 const thisMonth = {
-  title: "#98 - April 2023"
+  title: "#99 - May 2023"
 };
 
 const nextMonth = {
@@ -237,12 +235,10 @@ export default class Presentation extends React.Component {
           <Heading size={5} textColor="highlight">
             Food and drink
           </Heading>
-          <Image src={images.baselimeLogo} margin="0px auto 40px" height="293px" padding="10px" />
+          <Image src={images.pullumiLogo} margin="0px auto 40px" height="293px" padding="10px" />
         </Slide>
 
-        <Slide id={"baselime"}>
-          <Image src={images.baselimeChart} margin="0px auto 40px" height="100%" padding="10px" />
-        </Slide>
+        
 
         
 
@@ -291,7 +287,6 @@ export default class Presentation extends React.Component {
 
         <SpeakerSlide speaker={speakers[0]} />
         <SpeakerSlide speaker={speakers[1]} />
-        <SpeakerSlide speaker={speakers[2]} />
 
 
 
@@ -342,7 +337,7 @@ export default class Presentation extends React.Component {
             <br />
             <Image src={images.makersLogo} margin="10" height="100" />
             <Image src={images.pusherLogo} margin="10" height="80" />
-            <Image src={images.baselimeLogo} margin="10" height="80" />
+            <Image src={images.pullumiLogo} margin="10" height="80" />
           </div>
         </Slide>
 

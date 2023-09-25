@@ -42,20 +42,14 @@ const theme = createTheme(
 const images = {
   lnugLogo: require("../assets/lnug-logo.svg"),
   baselimeLogo: require("../assets/logos/Baselime_Logo_RGB_Primary_DarkBg_Neutral.2acb9b0.svg"),
-  ballysLogo: require("../assets/logos/Bally_s_Corporation_Logo.jpg"),
+
+  baselimeChart: require("../assets/baselime-chart.jpg"),
+  makersLogo: require("../assets/logos/makers-logo.png"),
   pusherLogo: require("../assets/logos/pusher_logo_white.png"),
-  pusherPromo: require("../assets/announcements/Pusher_promo.jpg"),
-  reactAle: require("../assets/react-ale.png"),
-  reactSummitLogo: require("../assets/logos/reactsummit.jpg"),
+  
 
   pizza: require("../assets/pizza-1.gif"),
-  cheers: require("../assets/cheers.gif"),
-
-  cityJSLogo: require("../assets/logos/cityJSConf.png"),
-  cityJS1: require("../assets/announcements/cityjs-promo-2020/11.png"),
-  cityJS2: require("../assets/announcements/cityjs-promo-2020/12.png"),
-  cityJS3: require("../assets/announcements/cityjs-promo-2020/13.png"),
-  singerTavernMap: require("../assets/singer-tavern.png"),
+  cheers: require("../assets/cheers.gif")
 
 };
 
@@ -66,21 +60,13 @@ const emcee = {
 
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
-  { name: "Ahmed Elsakaan",
-    twitter: "ixahmedxii ",
-    title: "Creating end-to-end typesafe APIs with tRPC"
+  { name: "Allen Helton",
+    twitter: "allenheltondev ",
+    title: "Creating best-in-class developer experience for your SDKs"
    },
-   { name: "Jiasheng",
-    twitter: "jiashenggo ",
-    title: "⚡️ Zenstack make fullstack development easy"
-   },
-   { name: "Erry Kostala",
-    twitter: " ",
-    title: "⚡️ web antipatterns"
-   },
-   { name: "Akash Shirish Joshi",
-    twitter: "thewritingdev",
-    title: "⚡️ Breaking client-server barriers with rocketrpc"
+     { name: "Mike Borozdin",
+    twitter: "mikeborozdin",
+    title: "Fastify - a fast web framework with batteries attached and amazing TypeScript suppor"
    },
    { name: "⚡️ ",
    twitter: "",
@@ -91,7 +77,7 @@ const speakers = [
 
 
 const thisMonth = {
-  title: "#97 - February 2023"
+  title: "#98 - April 2023"
 };
 
 const nextMonth = {
@@ -234,17 +220,10 @@ export default class Presentation extends React.Component {
           <Heading size={5} textColor="highlight">
             Venue
           </Heading>
-          <Image src={images.ballysLogo} margin="0px auto 40px" width="500px" padding="10px" />
+          <Image src={images.makersLogo} margin="0px auto 40px" width="500px" padding="10px" />
         </Slide>
 
-        <Slide id={"food-and-drink"}>
-          <Heading size={5} textColor="highlight">
-            Food and drink
-          </Heading>
-          <Image src={images.baselimeLogo} margin="0px auto 40px" height="293px" padding="10px" />
-        </Slide>
 
-  
 
 
         <Slide id={"video-production"}>
@@ -254,17 +233,17 @@ export default class Presentation extends React.Component {
           <Image src={images.pusherLogo} margin="0px auto 40px" width="800px" />
         </Slide>
 
-
-
-
-
-        <Slide id={"cityjsconf-promo"}>
-          <Image src={images.cityJSLogo} margin="0px auto 40px" />
+        <Slide id={"food-and-drink"}>
           <Heading size={5} textColor="highlight">
-            Tonight! ticket giveaway for CityJS Conference  - stay tuned
+            Food and drink
           </Heading>
-          <Heading size={5} textColor="secondary">cityjsconf.org</Heading>
+          <Image src={images.baselimeLogo} margin="0px auto 40px" height="293px" padding="10px" />
         </Slide>
+
+        <Slide id={"baselime"}>
+          <Image src={images.baselimeChart} margin="0px auto 40px" height="100%" padding="10px" />
+        </Slide>
+
         
 
         <Slide id={"community-announecments"}>
@@ -313,8 +292,7 @@ export default class Presentation extends React.Component {
         <SpeakerSlide speaker={speakers[0]} />
         <SpeakerSlide speaker={speakers[1]} />
         <SpeakerSlide speaker={speakers[2]} />
-        <SpeakerSlide speaker={speakers[3]} />
-        <SpeakerSlide speaker={speakers[4]} />
+
 
 
         {/* <Slide id={"competition-time"}>
@@ -362,7 +340,7 @@ export default class Presentation extends React.Component {
             <br />
             and thanks again...
             <br />
-            <Image src={images.ballysLogo} margin="10" height="60" />
+            <Image src={images.makersLogo} margin="10" height="100" />
             <Image src={images.pusherLogo} margin="10" height="80" />
             <Image src={images.baselimeLogo} margin="10" height="80" />
           </div>

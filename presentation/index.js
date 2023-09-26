@@ -42,7 +42,7 @@ const theme = createTheme(
 const images = {
   lnugLogo: require("../assets/lnug-logo.svg"),
   // baselimeLogo: require("../assets/logos/Baselime_Logo_RGB_Primary_DarkBg_Neutral.2acb9b0.svg"),
-  pullumiLogo: require("../assets/logos/pullumi.png"),
+  maltLogo: require("../assets/malt.png"),
 
   // baselimeChart: require("../assets/baselime-chart.jpg"),
   makersLogo: require("../assets/logos/makers-logo.png"),
@@ -55,27 +55,27 @@ const images = {
 };
 
 const emcee = {
-  name: "adam",
-  twitter: "admataz"
+  name: "Akash",
+  twitter: "thewritingdev"
 };
 
 // get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
 const speakers = [
-  { name: "Akash Joshi",
-    twitter: "thewritingdev ",
-    title: "Destroying Client-Server Barriers using TypeScript"
+  { name: "Sudarsan Balaji",
+    twitter: "theartfuldev",
+    title: "Crafting Robust APIs with TypeScript: A Hands-On Approach"
    },
 
-   { name: "⚡️ Open Mic - community and projects",
-   twitter: "",
-   title: "got a lightning talk or project to share? "
+   { name: "Praveen Kumar Purushothaman ",
+   twitter: "praveenscience",
+   title: "Client Side JavaScript Encryption & Decryption"
   },
 
 ];
 
 
 const thisMonth = {
-  title: "#99 - May 2023"
+  title: "#100 - September 2023"
 };
 
 const nextMonth = {
@@ -235,7 +235,7 @@ export default class Presentation extends React.Component {
           <Heading size={5} textColor="highlight">
             Food and drink
           </Heading>
-          <Image src={images.pullumiLogo} margin="0px auto 40px" height="293px" padding="10px" />
+          <Image src={images.maltLogo} margin="0px auto 40px" height="293px" padding="10px" />
         </Slide>
 
         
@@ -264,13 +264,7 @@ export default class Presentation extends React.Component {
               github.com/lnug/feedback
             </Code>
           </Heading>
-          <Heading size={6} textColor="secondary">
-            Gitter
-            <br />
-            <Code type="bold" textColor="secondary">
-              gitter.com/lnug/discuss
-            </Code>
-          </Heading>
+       
         </Slide>
 
         <Slide id={"submit-a-talk"}>
@@ -286,6 +280,15 @@ export default class Presentation extends React.Component {
         <SummarySlide id="ready" />
 
         <SpeakerSlide speaker={speakers[0]} />
+        <Slide id={"intermission"}>
+          <Heading size={5} textColor="highlight">
+            Intermission: Food and drink thanks to...
+          </Heading>
+          <Image src={images.maltLogo} margin="0px auto 40px" height="100px" padding="10px" />
+          <Image src={images.pizza} margin="0px auto 40px" height="150px" padding="10px" />
+          <Image src={images.cheers} margin="0px auto 40px" height="150px" padding="10px" />
+        </Slide>
+
         <SpeakerSlide speaker={speakers[1]} />
 
 
@@ -337,7 +340,7 @@ export default class Presentation extends React.Component {
             <br />
             <Image src={images.makersLogo} margin="10" height="100" />
             <Image src={images.pusherLogo} margin="10" height="80" />
-            <Image src={images.pullumiLogo} margin="10" height="80" />
+            <Image src={images.maltLogo} margin="10" height="80" />
           </div>
         </Slide>
 

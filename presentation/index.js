@@ -37,73 +37,45 @@ const theme = createTheme(
   }
 );
 
-// =============== reusable content for slides...
-
-const images = {
-  lnugLogo: require("../assets/lnug-logo.svg"),
-  // baselimeLogo: require("../assets/logos/Baselime_Logo_RGB_Primary_DarkBg_Neutral.2acb9b0.svg"),
-  pullumiLogo: require("../assets/logos/pullumi.png"),
-
-  // baselimeChart: require("../assets/baselime-chart.jpg"),
-  makersLogo: require("../assets/logos/makers-logo.png"),
-  pusherLogo: require("../assets/logos/pusher_logo_white.png"),
-  
-
-  pizza: require("../assets/pizza-1.gif"),
-  cheers: require("../assets/cheers.gif")
-
-};
-
-const emcee = {
-  name: "adam",
-  twitter: "admataz"
-};
-
-// get this from the latest from https://github.com/lnug/website/blob/master/data/this-month.json and add twitter details if desired
-const speakers = [
-  { name: "Akash Joshi",
-    twitter: "thewritingdev ",
-    title: "Destroying Client-Server Barriers using TypeScript"
-   },
-
-   { name: "⚡️ Open Mic - community and projects",
-   twitter: "",
-   title: "got a lightning talk or project to share? "
-  },
-
-];
-
-
-const thisMonth = {
-  title: "#99 - May 2023"
-};
-
-const nextMonth = {
-  date: "TBC",
-
-  speakers: [
-   
-  ]
-};
+import { meetingInfo } from "./meeting-info";
 
 // ================== reusable components
 
-const SpeakerSlide = ({ speaker }) => {
-  if (!speaker) {
+const SpeakerSlide = ({ talk }) => {
+  if (!talk) {
     return null;
   }
-
+  if (talk.title === "__INTERMISSION__") {
+    return (
+      <Slide id={"intermission"}>
+        <Heading size={5} textColor="highlight">
+          Intermission: Food and drink thanks to...
+        </Heading>
+        <Image src={meetingInfo.images.pizza} margin="0px auto 40px" height="150px" padding="10px" />
+        <Image src={meetingInfo.images.cheers} margin="0px auto 40px" height="150px" padding="10px" />
+      </Slide>
+    );
+  }
   return (
-    <Slide id={speaker.name.replace(" ", "-")}>
+    <Slide id={talk.title.replace(" ", "-")}>
       <Heading size={5} textColor="highlight" margin={50}>
         Next Up
       </Heading>
-      <Heading size={4} textColor="secondary">
-        {speaker.name}
-      </Heading>
-      {speaker.twitter && <Text textColor="secondary" textSize={20}>Twitter: @{speaker.twitter} </Text>}
+      {talk.speaker.map(speaker => (
+        <>
+          <Heading size={4} textColor="secondary">
+            <span>{speaker.name}</span>
+          </Heading>
+          {speaker.twitter && (
+            <Text textColor="secondary" textSize={20}>
+              Twitter: @{speaker.twitter}{" "}
+            </Text>
+          )}
+        </>
+      ))}
+
       <Heading size={6} textColor="secondary">
-        <S type="italics">{speaker.title}</S>
+        <S type="italics">{talk.title}</S>
       </Heading>
     </Slide>
   );
@@ -111,25 +83,27 @@ const SpeakerSlide = ({ speaker }) => {
 
 const SummarySlide = ({ id }) => (
   <Slide align={"center center"} id={id}>
-    <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
+    <Image src={meetingInfo.images.lnugLogo} margin="0px auto 0px" height="200px" />
     <Heading size={6} textColor="highlight">
-      {thisMonth.title}
+      {meetingInfo.title}
     </Heading>
-    {speakers.map((speaker) => (
-      <Fit key={speaker.title} textColor="secondary" textSize={38} margin="20px 0">
-        {speaker.name}{" "}
-        <S type="italics" textSize={24}>
-          {" "}
-          <br />
-          {speaker.title}{" "}
-        </S>
-        <Text textColor="secondary" textSize={20}>
-          {speaker.twitter && <span>Twitter: @{speaker.twitter} </span>}
-
-          {speaker.github && <span>Github: @{speaker.github}</span>}
-        </Text>
-      </Fit>
-    ))}
+    {meetingInfo.talks
+      .filter(t => !t.title.startsWith("__"))
+      .map(talk => (
+        <Fit key={talk.title} textColor="secondary" textSize={38} margin="20px 0">
+          <S type="italics" textSize={24}>
+            {talk.title}{" "}
+          </S>
+          <Text textColor="secondary" textSize={20}>
+            {talk.speaker.map(speaker => (
+              <>
+                {speaker.twitter && <span>Twitter: @{speaker.twitter} </span>}
+                {speaker.github && <span>Github: @{speaker.github}</span>}
+              </>
+            ))}
+          </Text>
+        </Fit>
+      ))}
   </Slide>
 );
 
@@ -197,53 +171,22 @@ export default class Presentation extends React.Component {
           </Heading>
           <Appear>
             <Heading size={6} textColor="secondary" margin="20px 0" textSize="20px" textColor="highlight">
-              tweet me too @{emcee.twitter}
+              tweet me too @{meetingInfo.emcee.twitter}
             </Heading>
           </Appear>
         </Slide>
 
-        <Slide id={"gitter"}>
-          <Heading size={3} textColor="highlight">
-            discuss!
-          </Heading>
-          <Heading size={4} textColor="secondary">
-            <Link href="https://discord.gg/DtPTak5pdQ" target="_blank">
-              <Code textColor="secondary">https://discord.gg/DtPTak5pdQ</Code>
-            </Link>
-          </Heading>
-        </Slide>
-
-
-        <Slide id={"venue"}>
-          <Heading size={5} textColor="highlight">
-            Venue
-          </Heading>
-          <Image src={images.makersLogo} margin="0px auto 40px" width="500px" padding="10px" />
-        </Slide>
-
-
-
-
-        <Slide id={"video-production"}>
-          <Heading size={5} textColor="highlight">
-            Video
-          </Heading>
-          <Image src={images.pusherLogo} margin="0px auto 40px" width="800px" />
-        </Slide>
-
-        <Slide id={"food-and-drink"}>
-          <Heading size={5} textColor="highlight">
-            Food and drink
-          </Heading>
-          <Image src={images.pullumiLogo} margin="0px auto 40px" height="293px" padding="10px" />
-        </Slide>
-
-        
-
-        
+        {meetingInfo.sponsors.map(sponsor => (
+          <Slide id={sponsor.role}>
+            <Heading size={5} textColor="highlight">
+              {sponsor.role}
+            </Heading>
+            <Image src={sponsor.logo} margin="0px auto 40px" width="500px" padding="10px" />
+          </Slide>
+        ))}
 
         <Slide id={"community-announecments"}>
-          <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
+          <Image src={meetingInfo.images.lnugLogo} margin="0px auto 0px" height="200px" />
           <Heading size={3} textColor="highlight" margin={50}>
             Community Announcements
           </Heading>
@@ -253,7 +196,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide id={"get-involved"}>
-          <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
+          <Image src={meetingInfo.images.lnugLogo} margin="0px auto 0px" height="200px" />
           <Heading size={5} textColor="highlight">
             Get Involved
           </Heading>
@@ -264,17 +207,10 @@ export default class Presentation extends React.Component {
               github.com/lnug/feedback
             </Code>
           </Heading>
-          <Heading size={6} textColor="secondary">
-            Gitter
-            <br />
-            <Code type="bold" textColor="secondary">
-              gitter.com/lnug/discuss
-            </Code>
-          </Heading>
         </Slide>
 
         <Slide id={"submit-a-talk"}>
-          <Image src={images.lnugLogo} margin="0px auto 0px" height="200px" />
+          <Image src={meetingInfo.images.lnugLogo} margin="0px auto 0px" height="200px" />
           <Heading size={3} textColor="highlight">
             Submit a talk proposal!
           </Heading>
@@ -284,11 +220,9 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <SummarySlide id="ready" />
-
-        <SpeakerSlide speaker={speakers[0]} />
-        <SpeakerSlide speaker={speakers[1]} />
-
-
+        {meetingInfo.talks.map(talk => (
+          <SpeakerSlide talk={talk} />
+        ))}
 
         {/* <Slide id={"competition-time"}>
           <Image src={images.cityJSLogo} margin="0px auto 40px" height="80px" />
@@ -299,17 +233,16 @@ export default class Presentation extends React.Component {
           <Heading size={5} textColor="secondary">reactsummit.com</Heading>
         </Slide> */}
 
-
         <Slide id={"nex-time"}>
-          <Image src={images.lnugLogo} margin="0px auto 0px" height="140px" />
+          <Image src={meetingInfo.images.lnugLogo} margin="0px auto 0px" height="140px" />
           <Heading size={5} textColor="highlight">
             Next Time
           </Heading>
           <Heading size={5} textColor="secondary">
-            {nextMonth.date}
+            {meetingInfo.nextMonth.date}
           </Heading>
           <List margin="20px 5%">
-            {nextMonth.speakers.map((speaker) => (
+            {meetingInfo.nextMonth.talks.map(speaker => (
               <ListItem key={speaker.title} textColor="secondary" textSize={30} margin="20px 0">
                 {speaker.name} <S type="italics"> - {speaker.title}</S>
               </ListItem>
@@ -319,12 +252,11 @@ export default class Presentation extends React.Component {
           <Code textColor="secondary" bold>
             meetup.com/london-nodejs
           </Code>
-          
         </Slide>
 
         <Slide align={"center center"}>
           <div align="center">
-            <Image src={images.lnugLogo} margin="10px" height="153px" />
+            <Image src={meetingInfo.images.lnugLogo} margin="10px" height="153px" />
             <Heading size={3} textColor="highlight">
               Thank You
             </Heading>
@@ -335,23 +267,19 @@ export default class Presentation extends React.Component {
             <br />
             and thanks again...
             <br />
-            <Image src={images.makersLogo} margin="10" height="100" />
-            <Image src={images.pusherLogo} margin="10" height="80" />
-            <Image src={images.pullumiLogo} margin="10" height="80" />
+            {meetingInfo.sponsors.map(sponsor => (
+              <Image src={sponsor.logo} margin="10" height="100" />
+            ))}
           </div>
         </Slide>
 
         <Slide>
           <Heading size={5} textColor="highlight" margin={10}>
-          To the Pub? 
+            To the Pub?
           </Heading>
-
           <Text textColor="secondary" margin={10}>
-          Before you go...
+            Before you go...
           </Text>
-          
-
-        
           Tidy up after yourself! Get involved!
         </Slide>
       </Deck>

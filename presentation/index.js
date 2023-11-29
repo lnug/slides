@@ -185,6 +185,20 @@ export default class Presentation extends React.Component {
           </Slide>
         ))}
 
+        <Slide id="nodeconf23">
+          <Heading size={5} textColor="highlight">
+          <Image src={require("../assets/promos/cityjs-24.png")} margin="0px auto 40px" width="90%" padding="10px" />
+          </Heading>
+         
+        </Slide>
+
+        <Slide id="cityJS24">
+          <Heading size={5} textColor="highlight">
+          <Image src={require("../assets/promos/nodeconf.png")} margin="0px auto 40px" width="90%" padding="10px" />
+          </Heading>
+          <Image src={require("../assets/promos/nodeconf-2023-qrcode_ti.to.png")} margin="0px auto 40px" width="500px" padding="10px" />
+        </Slide>
+
         <Slide id={"community-announecments"}>
           <Image src={meetingInfo.images.lnugLogo} margin="0px auto 0px" height="200px" />
           <Heading size={3} textColor="highlight" margin={50}>
@@ -224,14 +238,13 @@ export default class Presentation extends React.Component {
           <SpeakerSlide talk={talk} />
         ))}
 
-        {/* <Slide id={"competition-time"}>
-          <Image src={images.cityJSLogo} margin="0px auto 40px" height="80px" />
+         <Slide id={"competition-time"}>
+          <Image src={require("../assets/promos/cityjs-24.png")} margin="0px auto 40px" />
           <Heading size={5} textColor="highlight">
             Competition time!
           </Heading>
           <Heading size={5} textColor="secondary">cityjsconf.org</Heading>
-          <Heading size={5} textColor="secondary">reactsummit.com</Heading>
-        </Slide> */}
+        </Slide> 
 
         <Slide id={"nex-time"}>
           <Image src={meetingInfo.images.lnugLogo} margin="0px auto 0px" height="140px" />

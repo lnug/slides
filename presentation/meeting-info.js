@@ -1,5 +1,5 @@
 export const meetingInfo = {
-  title: "LNUG Meetup #101 : Svelte for Node.js developers (and more)",
+  title: "LNUG Meetup #101 : Svelte for Node.js developers and The Pain of WebRTC",
   date: "2023-10-24",
   emcee: {
     name: "Adam",
@@ -27,6 +27,14 @@ export const meetingInfo = {
       title: "Pusher",
       logo: require("../assets/logos/pusher_logo_white.png"),
       info: "Pusher are awesome"
+    }
+  ],
+
+  promotions: [
+    {
+      title: "NodeConf discount",
+      image: require("../assets/promos/nodeconf-2023-qrcode_ti.to.png"),
+      info: ""
     }
   ],
 

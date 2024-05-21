@@ -185,19 +185,13 @@ export default class Presentation extends React.Component {
           </Slide>
         ))}
 
-        <Slide id="nodeconf23">
+        <Slide id="cityjs24s">
           <Heading size={5} textColor="highlight">
           <Image src={require("../assets/promos/cityjs-24.png")} margin="0px auto 40px" width="90%" padding="10px" />
           </Heading>
          
         </Slide>
 
-        <Slide id="cityJS24">
-          <Heading size={5} textColor="highlight">
-          <Image src={require("../assets/promos/nodeconf.png")} margin="0px auto 40px" width="90%" padding="10px" />
-          </Heading>
-          <Image src={require("../assets/promos/nodeconf-2023-qrcode_ti.to.png")} margin="0px auto 40px" width="500px" padding="10px" />
-        </Slide>
 
         <Slide id={"community-announecments"}>
           <Image src={meetingInfo.images.lnugLogo} margin="0px auto 0px" height="200px" />

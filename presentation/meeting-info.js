@@ -1,6 +1,6 @@
 export const meetingInfo = {
-  title: "LNUG Meetup #101 : Svelte for Node.js developers and The Pain of WebRTC",
-  date: "2023-10-24",
+  title: "LNUG Meetup #102 : Partykit: 'The next stage of serverless is personal' and 'Suspend Server Side Request Waterfalls' with HonoJS",
+  date: "2023-11-29",
   emcee: {
     name: "Adam",
     twitter: "admataz"
@@ -17,9 +17,9 @@ export const meetingInfo = {
 
     {
       role: "Beer and Pizza",
-      title: "Nearform",
-      logo: require("../assets/logos/NF__Primary_Logo_Reversed_Horizontal.svg"),
-      info: "Nearform pizza yum"
+      title: "Baselime",
+      logo: require("../assets/logos/Baselime_Logo_RGB_Primary_DarkBg_Neutral.2acb9b0.svg"),
+      info: "Baselime pizza yum"
     },
 
     {
@@ -32,16 +32,21 @@ export const meetingInfo = {
 
   promotions: [
     {
-      title: "NodeConf discount",
-      image: require("../assets/promos/nodeconf-2023-qrcode_ti.to.png"),
+      title: "CityJS Conference ticket giveaway",
+      image: require("../assets/promos/cityjs-24.png"),
       info: ""
     }
   ],
 
   nextMonth: {
-    date: "TBC",
+    date: "31 Jan 2024",
 
-    talks: []
+    talks: [{
+      title: "Serverless Developer Experience",
+      speaker: [
+        {name: "luca mezzalira"}
+      ]
+    }]
   },
 
   images: {
@@ -59,15 +64,15 @@ export const meetingInfo = {
 
   talks: [
     {
-      title: "Learn the platform with svelte",
+      title: "The next stage of serverless is personal",
       description:
-        "Svelte is a frontend framework but despite that thanks to svelte-kit and the general philosophy behind svelte it's a great tool to get started in web dev because while learning svelte you can easily learn how the web platform works, and now with svelte-kit you can learn node too!\n\nI'm Paolo Ricciuti, i work as a full stack developer at Main matter and I'm a svelte lover (and also an official svelte ambassador).\n",
+        "\n",
       speaker: [
         {
-          name: "Paolo Ricciuti",
-          twitter: "paoloricciuti",
-          github: "paoloricciuti",
-          avatar: "https://avatars.githubusercontent.com/u/26281609?v=4"
+          name: "Sunil Pai",
+          twitter: "threepointone",
+          github: "threepointone",
+          avatar: "https://avatars.githubusercontent.com/u/18808?v=4"
         }
       ]
     },
@@ -79,15 +84,15 @@ export const meetingInfo = {
         title: "__INTERMISSION__"
     },
     {
-      title: "WebRTC: Why Art Thou Such A PITA?",
+      title: "Suspend Server Side Request Waterfalls",
       description:
         "The history and status of WebRTC, how it's still terribly unwieldy for people to get started with - even after a decade since it's release, and how we can use Node.js to build P2P applications at scale with a little bit of prodding.\n\n@seanmtracey, Developer Relations Manager at Moneyhub; CTO of KadVR.\n",
       speaker: [
         {
-          name: "Sean M. Tracey",
-          twitter: "seanmtracey",
-          github: "seanmtracey",
-          avatar: "https://avatars.githubusercontent.com/u/913687?v=4"
+          name: "Thomas Ankcorn",
+          twitter: "thomasankcorn",
+          github: "Ankcorn",
+          avatar: "https://avatars.githubusercontent.com/u/7361428?v=4"
         }
       ]
     }

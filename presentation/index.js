@@ -51,8 +51,8 @@ const SpeakerSlide = ({ talk }) => {
         <Heading size={5} textColor="highlight">
           Intermission: Food and drink thanks to...
         </Heading>
-        <Image src={meetingInfo.images.pizza} margin="0px auto 40px" height="150px" padding="10px" />
-        <Image src={meetingInfo.images.cheers} margin="0px auto 40px" height="150px" padding="10px" />
+        <Image src={meetingInfo.images.pizzaGif} margin="0px auto 40px" height="150px" padding="10px" />
+        <Image src={meetingInfo.images.cheersGif} margin="0px auto 40px" height="150px" padding="10px" />
       </Slide>
     );
   }
@@ -185,12 +185,6 @@ export default class Presentation extends React.Component {
           </Slide>
         ))}
 
-        <Slide id="cityjs24s">
-          <Heading size={5} textColor="highlight">
-          <Image src={require("../assets/promos/cityjs-24.png")} margin="0px auto 40px" width="90%" padding="10px" />
-          </Heading>
-         
-        </Slide>
 
 
         <Slide id={"community-announecments"}>
@@ -232,13 +226,7 @@ export default class Presentation extends React.Component {
           <SpeakerSlide talk={talk} />
         ))}
 
-         <Slide id={"competition-time"}>
-          <Image src={require("../assets/promos/cityjs-24.png")} margin="0px auto 40px" />
-          <Heading size={5} textColor="highlight">
-            Competition time!
-          </Heading>
-          <Heading size={5} textColor="secondary">cityjsconf.org</Heading>
-        </Slide> 
+
 
         <Slide id={"nex-time"}>
           <Image src={meetingInfo.images.lnugLogo} margin="0px auto 0px" height="140px" />

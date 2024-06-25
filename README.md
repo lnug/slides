@@ -1,4 +1,4 @@
-# LNUG meetip emcee slides 🎤
+# LNUG meetup emcee slides 🎤
 
 
 powered by [Slidev](https://github.com/slidevjs/slidev)!

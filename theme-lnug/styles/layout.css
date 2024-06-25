@@ -1,0 +1,45 @@
+:root {
+  /* default theme color */
+  /* can be overrided by uses `themeConfig` option */
+  --slidev-theme-primary: rgb(70, 72, 61);
+  --slidev-theme-secondary: rgba(255, 255, 255, 0.8);
+  --slidev-theme-highlight: rgba(190, 211, 64, 1);
+  --slidev-slide-container-background: #333;
+}
+
+
+
+h1,h2,h3,h4,h5,h6{
+  @apply color-[var(--slidev-theme-highlight)];
+  font-family: Montserrat;
+  font-weight: bold;
+
+}
+
+.slidev-layout h1{
+  font-variant: small-caps;
+}
+.slidev-layout h2{
+  @apply color-[var(--slidev-theme-secondary)] text-2xl;
+  
+  
+}
+
+.slidev-layout.cover,
+.slidev-layout.intro {
+  @apply h-full grid;
+
+  h1 {
+    @apply text-6xl leading-20;
+  }
+
+  h1 + p {
+    @apply -mt-2 opacity-50 mb-4;
+  }
+
+  p + h2,
+  ul + h2,
+  table + h2 {
+    @apply mt-10;
+  }
+}

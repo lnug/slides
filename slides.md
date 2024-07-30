@@ -4,30 +4,42 @@ title: LNUG 🎤 London Node User Group emcee
 info: |
   ## LNUG emcee slides
 # apply unocss classes to the current slide
-class: text-center
-layout: center
+# class: text-center
+# layout: center
 # image: lnug-logo.svg
 aspectRatio: 16/9
 transition: slide-left
 colorScheme: dark
 mdc: true
+class: text-center
+layout: two-cols-header
 ---
+
 
 
 # London Node User Group
 
-![](lnug-logo.svg){width=70% style="display:inline"}
+![](lnug-logo.svg){width=30% style="display:inline"}
 
 ## #104 June 2024
 
 
-![](https://avatars.githubusercontent.com/u/24249610?v=4){width=60px style="border-radius:50%; display:inline"} 
-Michael Arnaldi (@MichaelArnaldi)
-**Effect Loves Node.js**
 
 
+::left::
+![](https://avatars.githubusercontent.com/u/10000166?v=4){width=60px style="border-radius:50%; display:inline"} 
 
-![](https://avatars.githubusercontent.com/u/210965?v=4){width=60px style="border-radius:50%; display:inline"} Lovell Fuller **Looking sharp: 10 years of Node.js image processing**
+Miraan Tabrez (@miraan_tabrez)
+
+**Type-safe app configuration: a powerful, emerging way to accelerate product development**
+
+::right::
+
+![](https://avatars.githubusercontent.com/u/22196279?v=4){width=60px style="border-radius:50%; display:inline"} 
+
+Akash Joshi (@thewritingdev) 
+
+**Lessons Learned Building an AI CLI in 2024**
 
 
 
@@ -85,13 +97,6 @@ layout: center
 
 # <logos-cloudflare class="bg-white p-4" style="font-size:200px"/>
 
-
----
-class: text-center
-layout: center
----
-
-# <logos-twilio class="bg-white p-4" style="font-size:200px"/>
 
 
 ---
@@ -152,9 +157,11 @@ layout: center
 
 # Next up...
 
-![](https://avatars.githubusercontent.com/u/24249610?v=4){width=60px style="border-radius:50%; display:inline"} 
-Michael Arnaldi (@MichaelArnaldi)
-**Effect Loves Node.js**
+![](https://avatars.githubusercontent.com/u/10000166?v=4){width=60px style="border-radius:50%; display:inline"} 
+
+Miraan Tabrez (@miraan_tabrez)
+
+**Type-safe app configuration: a powerful, emerging way to accelerate product development**
 
 ---
 class: text-center
@@ -173,7 +180,11 @@ layout: center
 # Next up...
 
 
-![](https://avatars.githubusercontent.com/u/210965?v=4){width=60px style="border-radius:50%; display:inline"} Lovell Fuller **Looking sharp: 10 years of Node.js image processing**
+![](https://avatars.githubusercontent.com/u/22196279?v=4){width=60px style="border-radius:50%; display:inline"} 
+
+Akash Joshi (@thewritingdev) 
+
+**Lessons Learned Building an AI CLI in 2024**
 
 
 
@@ -193,8 +204,6 @@ layout: center
 
 # Thank you
 
-
-# <logos-twilio class="bg-white p-4" style="font-size:200px"/>
 
 # <logos-cloudflare class="bg-white p-4" style="font-size:200px"/>
 

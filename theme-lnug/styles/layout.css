@@ -13,7 +13,8 @@ h1,h2,h3,h4,h5,h6{
   @apply color-[var(--slidev-theme-highlight)];
   font-family: Montserrat;
   font-weight: bold;
-
+  margin: 0;
+  padding: 0;
 }
 
 .slidev-layout h1{

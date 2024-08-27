@@ -21,25 +21,25 @@ layout: two-cols-header
 
 ![](lnug-logo.svg){width=30% style="display:inline"}
 
-## #104 June 2024
+## #106 August 2024
 
 
 
 
 ::left::
-![](https://avatars.githubusercontent.com/u/10000166?v=4){width=60px style="border-radius:50%; display:inline"} 
+![](https://avatars.githubusercontent.com/u/49500880?v=4){width=60px style="border-radius:50%; display:inline"} 
 
-Miraan Tabrez (@miraan_tabrez)
+Neil Miller
 
-**Type-safe app configuration: a powerful, emerging way to accelerate product development**
+**How to build an aerial photos website with Node.js, OpenLayers, SQL Server, .. and an aeroplane!**
 
 ::right::
 
-![](https://avatars.githubusercontent.com/u/22196279?v=4){width=60px style="border-radius:50%; display:inline"} 
+![](https://avatars.githubusercontent.com/u/48883102?v=4){width=60px style="border-radius:50%; display:inline"} 
 
-Akash Joshi (@thewritingdev) 
+Oscar Pickerill (@oscars_dev) 
 
-**Lessons Learned Building an AI CLI in 2024**
+**Sniffing API requests for fun a̶n̶d̶ p̶r̶o̶f̶i̶t̶**
 
 
 
@@ -180,11 +180,11 @@ layout: center
 
 # Next up...
 
-![](https://avatars.githubusercontent.com/u/10000166?v=4){width=60px style="border-radius:50%; display:inline"} 
+![](https://avatars.githubusercontent.com/u/49500880?v=4){width=60px style="border-radius:50%; display:inline"} 
 
-Miraan Tabrez (@miraan_tabrez)
+Neil Miller
 
-**Type-safe app configuration: a powerful, emerging way to accelerate product development**
+**How to build an aerial photos website with Node.js, OpenLayers, SQL Server, .. and an aeroplane!**
 
 ---
 class: text-center
@@ -203,11 +203,11 @@ layout: center
 # Next up...
 
 
-![](https://avatars.githubusercontent.com/u/22196279?v=4){width=60px style="border-radius:50%; display:inline"} 
+![](https://avatars.githubusercontent.com/u/48883102?v=4){width=60px style="border-radius:50%; display:inline"} 
 
-Akash Joshi (@thewritingdev) 
+Oscar Pickerill (@oscars_dev) 
 
-**Lessons Learned Building an AI CLI in 2024**
+**Sniffing API requests for fun a̶n̶d̶ p̶r̶o̶f̶i̶t̶**
 
 
 

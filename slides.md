@@ -97,6 +97,29 @@ layout: center
 
 # <logos-cloudflare class="bg-white p-4" style="font-size:200px"/>
 
+---
+class: text-center
+layout: center
+addons:
+    - slidev-addon-qrcode
+---
+
+![](nodeconf-banner.png){width=50% style="display:inline"}
+
+    https://ti.to/nearform/nodeconf-eu-24/with/kxm1t7onyk0
+
+<QRCode
+    id="v"
+    :width="300"
+    :height="200"
+    type="canvas"
+    data="https://ti.to/nearform/nodeconf-eu-24/with/kxm1t7onyk0"
+    :margin="10"
+    :imageOptions="{ margin: 10}"
+    :dotsOptions="{ type: 'classy', color: 'black' }"
+    :backgroundOptions="{color: 'white'}"
+    image="/lnug-logo-monochrome.svg"
+/>
 
 
 ---

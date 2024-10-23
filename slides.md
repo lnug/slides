@@ -21,25 +21,24 @@ layout: two-cols-header
 
 ![](lnug-logo.svg){width=30% style="display:inline"}
 
-## #106 August 2024
+## #109 October 2024
 
 
 
 
 ::left::
-![](https://avatars.githubusercontent.com/u/49500880?v=4){width=60px style="border-radius:50%; display:inline"} 
+![](https://pbs.twimg.com/profile_images/1766531513443569664/h2rgasvM_400x400.jpg){width=60px style="border-radius:50%; display:inline"}
 
-Neil Miller
+Matt Bidewell
 
-**How to build an aerial photos website with Node.js, OpenLayers, SQL Server, .. and an aeroplane!**
+**The Great Escape: Escaping the Legacy Code Trap!**
 
 ::right::
 
-![](https://avatars.githubusercontent.com/u/48883102?v=4){width=60px style="border-radius:50%; display:inline"} 
+![](https://media.istockphoto.com/id/515930993/vector/man-head-and-shoulders-silhouette-with-excalmation-mark-vector.jpg?s=612x612&w=0&k=20&c=z5S6LDk3CDOox5jSM0mSCIqxjslxHUZ3tVipKlCLWVw=){width=60px style="border-radius:50%; display:inline"}
 
-Oscar Pickerill (@oscars_dev) 
 
-**Sniffing API requests for fun a̶n̶d̶ p̶r̶o̶f̶i̶t̶**
+**Lightning talks, Demo's, and Announcements**
 
 
 
@@ -95,32 +94,14 @@ class: text-center
 layout: center
 ---
 
-# <logos-cloudflare class="bg-white p-4" style="font-size:200px"/>
+<img src="https://lnug.org/img/partners/beamery-logo-colour.png" />
 
 ---
 class: text-center
 layout: center
-addons:
-    - slidev-addon-qrcode
 ---
 
-![](nodeconf-banner.png){width=50% style="display:inline"}
-
-    https://ti.to/nearform/nodeconf-eu-24/with/kxm1t7onyk0
-
-<QRCode
-    id="v"
-    :width="300"
-    :height="200"
-    type="canvas"
-    data="https://ti.to/nearform/nodeconf-eu-24/with/kxm1t7onyk0"
-    :margin="10"
-    :imageOptions="{ margin: 10}"
-    :dotsOptions="{ type: 'classy', color: 'black' }"
-    :backgroundOptions="{color: 'white'}"
-    image="/lnug-logo-monochrome.svg"
-/>
-
+<img src="https://lnug.org/img/partners/twilio-logo.svg" alt="My SVG" class="w-60 h-60" />
 
 ---
 class: text-center
@@ -180,12 +161,11 @@ layout: center
 
 # Next up...
 
-![](https://avatars.githubusercontent.com/u/49500880?v=4){width=60px style="border-radius:50%; display:inline"} 
+![](https://pbs.twimg.com/profile_images/1766531513443569664/h2rgasvM_400x400.jpg){width=60px style="border-radius:50%; display:inline"}
 
-Neil Miller
+Matt Bidewell
 
-**How to build an aerial photos website with Node.js, OpenLayers, SQL Server, .. and an aeroplane!**
-
+**The Great Escape: Escaping the Legacy Code Trap!**
 ---
 class: text-center
 layout: center
@@ -203,13 +183,9 @@ layout: center
 # Next up...
 
 
-![](https://avatars.githubusercontent.com/u/48883102?v=4){width=60px style="border-radius:50%; display:inline"} 
+![](https://media.istockphoto.com/id/515930993/vector/man-head-and-shoulders-silhouette-with-excalmation-mark-vector.jpg?s=612x612&w=0&k=20&c=z5S6LDk3CDOox5jSM0mSCIqxjslxHUZ3tVipKlCLWVw=){width=60px style="border-radius:50%; display:inline"}
 
-Oscar Pickerill (@oscars_dev) 
-
-**Sniffing API requests for fun a̶n̶d̶ p̶r̶o̶f̶i̶t̶**
-
-
+**Lightning talks, Demo's, and Announcements**
 
 ---
 class: text-center
@@ -228,8 +204,8 @@ layout: center
 # Thank you
 
 
-# <logos-cloudflare class="bg-white p-4" style="font-size:200px"/>
-
+<img src="https://lnug.org/img/partners/beamery-logo-colour.png" />
+<img src="https://lnug.org/img/partners/twilio-logo.svg" alt="My SVG" class="w-60 h-60" />
 
 ---
 class: text-center

@@ -19,7 +19,7 @@ layout: two-cols-header
 
 # London Node User Group
 
-![](lnug-logo.svg){width=30% style="display:inline"}
+![](./lnug-logo.svg){width=30% style="display:inline"}
 
 ## #109 October 2024
 
@@ -173,7 +173,7 @@ layout: center
 
 # Intermission
 
-![](lnug-logo.svg)
+![](./lnug-logo.svg)
 
 ---
 class: text-center
@@ -214,7 +214,7 @@ addons:
     - slidev-addon-qrcode
 ---
 
-![](lnug-logo.svg){width=300}
+![](./lnug-logo.svg){width=300}
 
 # Before you go...
 Tidy up after yourself! Get involved!
